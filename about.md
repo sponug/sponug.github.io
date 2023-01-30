@@ -12,4 +12,4 @@ Love reading , watching movies
 
 ### Contact me
 
-[srinivas.ponugupaty@gmail.com.com](mailto:srinivas.ponugupaty@gmail.com)
+[srinivas.ponugupaty@gmail.com](mailto:srinivas.ponugupaty@gmail.com)
