@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Draft - On Mentorship
+title: On Mentorship
 ---
 
 Notes on mentorship: I have found this article [How to mentor software engineers](https://xdg.me/mentor-engineers/) on mentoring engineers to be actionable yet devoid of any platitudes. Some of my favourite highlights below -
