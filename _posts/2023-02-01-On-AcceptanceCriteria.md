@@ -3,7 +3,7 @@ layout: post
 title: On Acceptance Criteria
 ---
 
-Notes on Tech Debt: I have found this article [Patterns of effective acceptance criteria](https://brettsbabble.wordpress.com/2011/03/26/patterns-for-effective-acceptance-criteria/) useful in understanding how best to write good acceptance criteria.
+Notes on writing good acceptance criteria: I have found this article [Patterns of effective acceptance criteria](https://brettsbabble.wordpress.com/2011/03/26/patterns-for-effective-acceptance-criteria/) useful in understanding how best to write good acceptance criteria.
 
 **Why do we write acceptance criteria** :
 Acceptance Criteria are a way of capturing the expected behaviour of the system, written in such a way that we can easily test to see if they have been met. So we have a couple of main motivations -
