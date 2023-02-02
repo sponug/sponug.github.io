@@ -33,3 +33,25 @@ Regardless of the time to implement a fix, though, we also must consider the ris
 
 Working on League, most of the tech debt I’ve seen falls into one of the 4 categories I’ve presented here. Local debt, like a black box of gross. Duct Tape debt, where 2 or more systems are duct-taped together with conversion functions. Foundational debt, when the entire structure is built on some unfortunate assumptions. Data debt, when enormous quantities of data are piled on some other type of debt, making it risky and time-consuming to fix.
 
+**Edit 1** : My friend Ram asked a valid question on reading the original entry , which in retrospect should have been the original entry point to any discussion around tech debt 
+
+I found the treatment [here](https://kellanem.com/notes/towards-an-understanding-of-technical-debt) on point to the question which was "what do we consider as tech debt?" . Notes from the article below -
+
+> All Code Is Liability 
+>> Peter Norvig
+
+> Technical debt exists. But it’s relatively rare. When you start arguing with someone about technical debt, you’ll generally encounter a definition like: Technical debt is the choices we made in our code, intentionally, to speed up development today, knowing we’d have to change them later. Hard coding a variable because currently there is no plan to change it is a common example of technical debt. Similarly not modularizing a function
+
+How then do we explain the overwhelming prevalence of technical debt we encounter when we talk to people about code? The term is being abused, or at least dangerously overloaded.
+
+**Tech Debt as an overloaded term**
+There are at least *5 distinct things* we mean we say “technical debt”.
+
+- Maintenance work: Necessary ongoing maintenance work a codebase needs but we use the term tech debt as a shorthand.
+- Features of the codebase that resist change: Therefore the second common meaning of “technical debt” is the features of the codebase we encounter in our work that make it resist change. Examples of features that can make a codebase resist change include: poor modularization, poor documentation or poor test coverage.
+- Operability choices that resist change: Related to the code choices we’ve made that resist change: what are the operability choices we’ve made in the design of our systems that put downward pressure on change? If the site goes down every time you make a change, you stop making changes. If you don’t have metrics you can’t deploy changes confidently. Similarly if your tests are flakey, if extensive coordination is required for a release, if you don’t have staging environments, if you can’t run product and operational experiments, if people don’t have access to the information they need to make decisions, if incentives are misaligned
+- Code choices that suck the will to live: We often describe this code with the suck-the-will-to-live quality as messy (spaghetti), unmaintainable, or amateurish. Often what we’re describing under the surface is fear and confusion. We don’t understand the code, and when we don’t understand things, as human, we tend to get scared, tired, and angry. Often we find this pattern in teams who’ve inherited a codebase. The code that was originally written by a small tight knit team with a clear vision of the problem is now being worked on by (often much more senior) separate teams working in some degree of silo. What was a productive lack of indirection to the code becomes a poorly considered lack of abstraction resisting change
+- Dependencies that resist upgrading: Finally we use technical debt to describe technical decisions that bind a codebase to a technology that due to the passage of time has become a liability: it has stopped receiving updates, expertise are difficult to find, upgrade paths become convoluted. Often a single dependency pegged to an older technology cascades across your infrastructure holding back important upgrades. Archaic dependencies are often a symptom that we weren’t able to prioritize ongoing investment and maintenance of the codebase (see #1), and is the thing most reasonable to refer to as technical debt.
+
+In summary - And finally you should especially worry if your team believes they’re “fixing” or “paying off” technical debt. All code is technical debt. All code is, to varying degrees, an incorrect bet on what the future will look like. You can address issues that are damaging to productivity, operability and morale, but only way to “fix technical debt” is “rm -rf”.
+
