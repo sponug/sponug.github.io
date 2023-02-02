@@ -20,5 +20,12 @@ When you make it clear to your dev team that the success of the product depends 
 
 When everyone understands the goal, everyone works better to achieve it. 
 
+**Accuracy vs Precision**
+Pick accuracy over precision when estimating dev tasks. [Good reference](https://itsadeliverything.com/accuracy-vs-precision-in-estimation)
+
+**#noestimate movement**
+
+I do not think #noestimates is pragmatic in majority of situations , but had to include their manifesto because it's pretty well written . [here](http://zuill.us/WoodyZuill/2012/12/10/no-estimate-programming-series-intro-post/)
+
 
 
