@@ -3,6 +3,8 @@ layout: post
 title: On Stakeholder Management
 ---
 
+Notes on stakeholder management:
+
 - Projects exist within a complex ecosystem of stakeholders and other projects managers managing projects which are related to you in some way 
 - Having a simple and concise way of analysing the ecosystem is a vital part of project management
 - You need to be able to build a very open and transparent relationship with your stakeholders 
