@@ -7,10 +7,10 @@ title: On Stakeholder Management
 - Having a simple and concise way of analysing the ecosystem is a vital part of project management
 - You need to be able to build a very open and transparent relationship with your stakeholders 
 - There are various types of models to identify and analyse stakeholders - affinity diagrams , RACI being two of them. But we will consider a simpler model here
-- We will categorize stakeholders into 3 categories -
-  - Critical : can stop project from succeding . Have to buy-in and sign-off on any critical decision within the project. Build and mantain relationship/communicate F2F
-  - essential: can delay the project.You can find replacements but can delay you. Two-way communication
-  - interested: Must be informed. As long as they are aware of what is happening , they will remain passive. One-way updates
+- We will categorize stakeholders into **3 categories** -
+  - **Critical** : can stop project from succeding . Have to buy-in and sign-off on any critical decision within the project. Build and mantain relationship/communicate F2F
+  - **essential**: can delay the project.You can find replacements but can delay you. Two-way communication
+  - **interested**: Must be informed. As long as they are aware of what is happening , they will remain passive. One-way updates
 - Consult and pre-consult your critical stakeholders.Ensure interested parties are communicated with
 - Take the whole lifecycle model when engaging with your stakeholders. Interested in Dev obvious but who operate and realise the benefits are important as well.
 - Typically during execution ( critical, essential and interested) during support( critical , essential ) and during benefit realisation( informed )
