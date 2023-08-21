@@ -27,11 +27,11 @@ Notes on stakeholder management:
   - Ask yourself , if you are successfully deliver a project , what are the wins for a particular stakeholder and what are their losses for each win?
   - Builds open and trusting relationship with the stakeholders . Best time to use this tool is upfront , before you start the project
 
-[Reference 1](https://youtu.be/zx8s2aAkTeU)[Reference 2]([
-](https://minimumviableproject.beehiiv.com/p/stepbystep-guide-master-stakeholder-management)
+[Reference 1](https://youtu.be/zx8s2aAkTeU)
+[Reference 2](https://minimumviableproject.beehiiv.com/p/stepbystep-guide-master-stakeholder-management)
 - -------------------------------------------
 Will expand on this - TBD
-[Reference 2](https://minimumviableproject.beehiiv.com/p/stepbystep-guide-master-stakeholder-management)
-[Reference 3](https://buildingromes.substack.com/p/lessons-stakeholder-management)
+[Reference 3](https://minimumviableproject.beehiiv.com/p/stepbystep-guide-master-stakeholder-management)
+[Reference 4](https://buildingromes.substack.com/p/lessons-stakeholder-management)
 
 
