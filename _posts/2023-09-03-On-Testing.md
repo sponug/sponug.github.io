@@ -10,4 +10,4 @@ title: On Testing
   - Each test case should test one aspect of functionality or feature
   - It should be easy to understand what went wrong with a test when you read the test results
   - **Meaningful tests** - Write tests that are meaningful and have a purpose and not for coverage
-  -  
+  - **Dont test implementation details** -  
