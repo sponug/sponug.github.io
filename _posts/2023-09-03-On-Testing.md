@@ -4,7 +4,7 @@ title: On Testing
 ---
 
 
-- Key question answered in the above article is "what to test and what to avoid"
+Key question answered in the above article is "what to test and what to avoid"
 - General guidelines for testing - unit , integration or end-t0-end testing
   - **Keep it simple** - the intent of the test should be clear in the first glance
   - Each test case should test one aspect of functionality or feature
