@@ -63,5 +63,6 @@ This section goes over - the differences between a decision and an outcome, outc
 - when a decision seems complex, pause, slow down and re-evaluate 
 
 
+
 ## Another paragraph <a name="paragraph2"></a>
 The second paragraph's text
