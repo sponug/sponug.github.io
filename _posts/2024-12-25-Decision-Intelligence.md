@@ -27,7 +27,7 @@ This section goes over - the differences between a decision and an outcome, outc
 ### Decisions vs Outcome <a name="decvout"></a>
 - **Decision** is more than a choice between options. It is an **irrevocable allocation of resources**. Money, time, opportunity cost
 - **Outcome** is how things turn out later. A good decision might or might not lead to a good outcome.
-- If you show an "outcome bias" i.e. sometimes good decisions lead to bad outcomes, you walk away learning the wrong lessons.
+- If you show an "outcome bias," i.e., sometimes good decisions lead to bad outcomes, you will walk away learning the wrong lessons.
 - Outcome has two components, the quality of decision and luck. Please keep in mind the conditions under which a decision was made.
 
 
@@ -56,6 +56,11 @@ This section goes over - the differences between a decision and an outcome, outc
     - Risk & Ambiguity: Both make a decision much harder
       - Ambiguity - Probability not known. Risk - probability is known
     - Timing: Amount of time you have to make a decision
+    - Group decisions: where the decision has a large impact on others
+    - Social consequences & social effects: scrutiny and consequences
+    - Internal conflicts: Conflict of incentives
+    - Adversial effects: competition
+- when a decision seems complex, pause, slow down and re-evaluate 
 
 
 ## Another paragraph <a name="paragraph2"></a>
