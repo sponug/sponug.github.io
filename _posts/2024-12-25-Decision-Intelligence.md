@@ -3,7 +3,7 @@ layout: post
 title: Decision Intelligence
 ---
 
-Page to hold the weekly progress made on the blog
+My notes from the decision intelligence class
 
 # Table of contents
 1. [Introduction](#introduction)
@@ -55,7 +55,7 @@ This section goes over - the differences between a decision and an outcome, outc
     - Information: Do you have full and reliable information?
     - Risk & Ambiguity: Both make a decision much harder
       - Ambiguity - Probability not known. Risk - probability is known
-    - Timing : Amount of time you have to make a decision
+    - Timing: Amount of time you have to make a decision
 
 
 ## Another paragraph <a name="paragraph2"></a>
