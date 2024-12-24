@@ -53,8 +53,9 @@ This section goes over - the differences between a decision and an outcome, outc
     - Cognitive Load: high cognitive function. A lot of effort.
     - Emotion: Does the decision trigger you emotionally?
     - Information: Do you have full and reliable information?
-    - Risk & Ambiguity:
-      - Ambiguity - Probability not known. Risk - probability is known   
+    - Risk & Ambiguity: Both make a decision much harder
+      - Ambiguity - Probability not known. Risk - probability is known
+    - Timing : Amount of time you have to make a decision
 
 
 ## Another paragraph <a name="paragraph2"></a>
