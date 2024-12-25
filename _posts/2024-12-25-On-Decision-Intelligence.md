@@ -12,6 +12,7 @@ My notes from the decision intelligence class
     2. [Dangers of outcome bias](#outbias)
     3. [Difficult Decisions](#difdec)
     4. [Setting Goals](#goals)
+    5. [Human Factors](#human)
 3. [Another paragraph](#paragraph2)
 
 ## Introduction <a name="introduction"></a>
@@ -75,7 +76,27 @@ This section goes over - the differences between a decision and an outcome, outc
     - Performance Goal: Measurable and under your control. Can be aspirational. Ex: run 5 miles in under 45 mins
     - Process Goal: Measurable and fully under your control.Ex: Run 45mins every other day
 - **Never allow the process goal to take over the most important**
-- 
+
+### Intuition <a name="intuition"></a>
+- How much effort, data & information to put towards your decision
+The key is not to overspend or underspend on a decision
+- Visualize the best and worst-case scenarios of what could come out of  your decision
+- what are you willing to pay for the perfect decision? When the value isn't too high - use intuition
+- Intuition works best for low-value decisions.
+- Practice using rigor to make low-value decisions.
+- Intuition also works best under time pressure. Expertise helps here
+- Unstructured decision making
+- use the most amount of time on decisions which are  -
+  - High importance
+  - Plenty of time
+  - Lack expertise
+  - needs structure 
+
+### Human Elements In Decision Making <a name="human"></a>
+-Humans are influenced by biological factors: Our decision-making can be suboptimal due to factors like lack of sleep, low blood sugar, stress, and strong emotions.
+-Pre-hacking yourself: Like athletes create optimal conditions for performance, you should create optimal conditions for important decisions. Avoid making critical decisions when you're not at your best.
+-Principal-agent problem analogy: Long-term goals (principal) and short-term desires (agent) can conflict. Setting constraints can help align short-term actions with long-term goals.
+-These points highlight the importance of understanding and managing the biological and psychological factors that affect our decision-making
 
   
 
