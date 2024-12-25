@@ -6,6 +6,7 @@ title: Decision Intelligence
 My notes from the decision intelligence class
 
 # Table of contents
+0. [Quick Summary](#summary)
 1. [Introduction](#introduction)
 2. [Decision Maker In Isolation](#paragraph1)
     1. [Decision Vs Outcome](#decvout)
@@ -24,6 +25,113 @@ My notes from the decision intelligence class
     1. [Group Decision](#grp)
     2. [Career Making](#career)
     3. [Culture & Delivering Value](#culture)
+
+## Quick Summary <a name="summary"></a>
+**Decision Intelligence**  
+*Smarter decisions for better results*  
+
+### **What is Decision Intelligence?**  
+Think of your life as a car ride. You can't control the weather (luck), but you *can* steer the wheel (your decisions). Good decision-making compounds over time, shaping the direction and quality of your life. This course helps you turn information into better actions, no matter the scale or situation.   
+The best part? Decision-making is a skill. You can improve it.  
+
+### **Key Takeaways**  
+
+**Decisions vs. Outcomes**  
+- *A decision* is more than just picking between options. It's how you spend your time, money, and energy.  
+- *An outcome* is what happens afterward. A good decision doesn’t always lead to a good outcome (luck plays a part).  
+- **Avoid outcome bias.** Don’t judge decisions based on what happened *after*. Focus on what was known *at the time.*  
+
+**How to Spot a Quality Decision**  
+- What info did you gather?  
+- Where did you get it?  
+- How much info did you need, based on the stakes?  
+- **Pro tip:** Write down what you knew *right after* making a big decision. It saves you from hindsight bias later.  
+
+### **Why Some Decisions Are Hard**  
+- **Too many options** – The more choices, the harder it is.  
+- **Similar options** – If they all seem the same, picking one feels impossible.  
+- **No clear goal** – What are you actually trying to achieve?  
+- **High stakes** – When mistakes are costly, decisions feel heavier.  
+- **Reversible or not** – Can you undo this decision?  
+- **Emotion** – Sometimes, we *feel* too much about a decision.  
+- **Risk vs. Ambiguity** – Is the chance of failure known (risk) or unclear (ambiguity)?  
+- **Group decisions** – When others are involved, it gets complicated.  
+- **Social pressure** – What will people think?  
+- **Internal conflict** – Are *you* getting in your own way?  
+*When a decision feels overwhelming, slow down. Re-evaluate.*  
+
+### **Setting Better Goals**  
+- Start with what *isn’t* a priority.  
+- Then, look at your real opportunities.  
+
+**3 Types of Goals:**  
+- **Outcome goals** – Big-picture wins (e.g., "Be healthier").  
+- **Performance goals** – Specific targets (e.g., "Run 5 miles in 45 min").  
+- **Process goals** – Daily actions (e.g., "Run every other day").  
+
+### **Trusting Intuition vs. Data**  
+- **Small decisions?** Trust your gut.  
+- **Big, high-stakes decisions?** Use data and structure.  
+*Visualize the best and worst-case outcomes. How much is this decision worth to you?*  
+
+### **Human Factors in Decisions**  
+- Tired? Hungry? Stressed? Your brain doesn’t work as well.  
+- **Hack your brain.** Make big decisions when you’re well-rested and calm.  
+- **The "two selves" problem** – Long-term you (future goals) fights short-term you (temptation). Set rules to stay on track.  
+
+### **Being Decisive**  
+- Time matters. Don’t rush, but don’t overthink.  
+- Focus on *important* decisions. Don’t waste energy on trivial ones.  
+- When all options seem bad, pick the least worst and move forward.  
+- If two options seem equal, stop wasting time – just choose one.  
+
+### **Staying Objective**  
+- Your brain *loves* to prove itself right (confirmation bias).  
+- Data helps, but even data can be misleading. Stay aware.  
+- Ask: "Am I just looking for info that agrees with me?"  
+
+### **Better Questions, Better Answers**  
+- Don’t jump straight to answers. First, ask:  
+  - What are my options?  
+  - What assumptions am I making?  
+  - What questions should I *actually* be asking?  
+
+### **Data-Driven Decisions**  
+- Define your goals *before* you look at the data. Otherwise, you’ll just cherry-pick info that fits your pre-made choice.  
+- Use separate data sets for different stages of analysis.  
+- **Key step:** Ask yourself, "Would this new info *actually* change my decision?"  
+
+### **Automating Decisions**  
+- Repetitive decisions? Automate them. Use data, machine learning, or simple rules to save time.  
+- **Examples:**  
+  - Use analytics for open-ended exploration.  
+  - Use AI/ML for frequent decisions.  
+
+### **Group Decisions**  
+- **Pros:** More perspectives, less bias.  
+- **Cons:** Takes longer, and responsibility gets blurry.  
+- **Fix it:** Limit decision-makers. Use the rest as advisors.  
+- *Clarify:* Is the group here to decide or just to approve?  
+
+### **Career-Making Decisions**  
+- Ask decision-makers: "What would change your mind?"  
+- If nothing could change their mind, it’s not a real decision – it’s persuasion.  
+- Follow-ups:  
+  - How nervous are you?  
+  - How important is this?  
+  - How bad could it go?  
+
+### **Delivering Value & Driving Culture**  
+- **Find key decision-makers.** What do they care about? What data do they trust?  
+- **Improve their decisions.** Bring better data, ask better questions, and align with their goals.  
+- Automate small, repeatable decisions so you can focus on the big ones.  
+- **Remember:** Good leadership = good decision-making.  
+- **Final tip:** Most problems (even technical ones) are *people* problems. Work well with others, and you’ll go far.  
+**Recommendation:** This course is a game-changer. If you want to level up how you think, act, and lead – sign up. You'll thank yourself later!
+
+---
+
+
 
 ## Introduction <a name="introduction"></a>
 - Two things determine the quality of your life: luck and the quality of your decisions. You can control only one of them
