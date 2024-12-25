@@ -13,6 +13,7 @@ My notes from the decision intelligence class
     3. [Difficult Decisions](#difdec)
     4. [Setting Goals](#goals)
     5. [Human Factors](#human)
+    6. [Being Decisive](#decisive)
 3. [Another paragraph](#paragraph2)
 
 ## Introduction <a name="introduction"></a>
@@ -98,7 +99,12 @@ The key is not to overspend or underspend on a decision
 - Principal-agent problem analogy: Long-term goals (principal) and short-term desires (agent) can conflict. Setting constraints can help align short-term actions with long-term goals.
 - These points highlight the importance of understanding and managing the biological and psychological factors that affect our decision-making
 
-  
+### Being Decisive <a name="decisive"></a>
+- Timing of Decisions: Make decisions at the right time to avoid wasting resources. 
+- Prioritization: Indecisiveness often stems from being distracted by lower-priority decisions. Focus on high-priority decisions to avoid cognitive overload.
+- Handling Emotions: When all options seem bad, choose the least worst one and execute it. Avoid getting stuck in emotional grief over suboptimal choices.
+- Similar Options: If options are very similar in value, don't over-optimize. Save your energy for more significant decisions.
+
 
 
 
