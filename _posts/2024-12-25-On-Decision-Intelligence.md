@@ -15,7 +15,13 @@ My notes from the decision intelligence class
     5. [Human Factors](#human)
     6. [Being Decisive](#decisive)
     7. [Objectivity](#objectivity)
-3. [Another paragraph](#paragraph2)
+3. [Decision Intelligence](#intelligence)
+    1.[Better Questions](#questions)
+    2.[Data Driven Decisions](#ddd)
+    3.[Better Answers](#bans)
+    4.[Decision Automation](#auto)
+4. [Data Driven Leadership](#ddl)
+    1. [Group Decision](#grp)
 
 ## Introduction <a name="introduction"></a>
 - Two things determine the quality of your life: luck and the quality of your decisions. You can control only one of them
@@ -111,7 +117,46 @@ The key is not to overspend or underspend on a decision
 - Impact of Cognitive Biases: Your brain can play tricks on you, affecting how you process information. Even the wording of information can change your decisions.
 - Data and Objectivity: Data does not automatically equal objectivity. It's important to be aware of your cognitive biases and how they might affect your interpretation of data.
 
+## Decision Intelligence <a name="intelligence"></a>
+- Data as a Tool: Data is a powerful tool for decision-making, but it's important to remember that data itself is just a means to an end.
+- Electronic Storage: Storing information electronically enhances memory and accessibility, making it easier to analyze and use.
+- **Limitations of Data**: Data is not inherently objective or true; it is influenced by the choices and biases of the people who collect and interpret it.
+- The value of data is memory, not objectivity
 
+### Better Questions <a name="questions"></a>
+- Analytics is taking a look at information and enables us to frame the questions
+    - what are the options
+    - what assumptions are reasonable    - 
+    - what what questions are relevant and which ones are worth asking
+- Analytics augment the decision makers' abilities but is not decision-making by itself
+- Managing analytics is investing time in exploration
 
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph's text
+### Data Driven Decisions <a name="ddd"></a>
+- When using data for decisions watch out for confirmation bias i.e. when you are looking for data to back the decision you already made
+- Avoiding Confirmation Bias: To make a truly data-driven decision, it's crucial to set your goals and criteria before looking at the data to avoid confirmation bias.
+- Separate Data Sets: Use separate data sets for analytics and statistics to ensure that your questions and answers are not influenced by the same data points.
+- Pre-Decision Homework: Decision-makers should do their homework and define what the data means to them before analyzing it to improve decision quality.
+
+### Better Answers <a name="bans"></a>
+- Steps to frame a data-driven decision
+- what would you do with no new information? We are selecting the default action
+- Does the information truly change my mind
+- what would do with all the information you needed?
+- Stats is helpful when you don't have all the information and there is uncertainty
+- Deal with information in this order -
+    - No information. This leads to the default action
+    - Full information. Which pieces of information would you consider
+    - Partial information. Stats can help here     
+
+### Decision Automation <a name="auto"></a>
+- Data science is an umbrella term used to make data useful and involves 4 different flavors depending on the number of decisions 
+    - analytics: no idea. Open minded and exploring
+    - Stats: used for a few important decisions
+    - Machine Learning / AI - Many decisions
+    - Persuasion: Data storytelling. 
+- Decision Automation: Machine learning and AI are essential for automating decisions at a large scale, using patterns in data to create models that execute decisions automatically.
+- Machine learning boils down to **optimise ___(objective) on __( Examples )**  
+
+## Data Driven Leadership <a name="ddl"></a>
+### Group Decisions <a name="grp"></a>
+
