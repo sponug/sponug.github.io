@@ -23,6 +23,7 @@ My notes from the decision intelligence class
 4. [Data Driven Leadership](#ddl)
     1. [Group Decision](#grp)
     2. [Career Making](#career)
+    3. [Culture & Delivering Value](#culture)
 
 ## Introduction <a name="introduction"></a>
 - Two things determine the quality of your life: luck and the quality of your decisions. You can control only one of them
@@ -190,7 +191,29 @@ The key is not to overspend or underspend on a decision
     - How nervous are you?
     - How important is the decision?
     - How badly can it go?     
-       
+### Culture & Delivering Value <a name="culture"></a>
+- Identify Decision-Makers:
+    -Understand who the decision-makers are at a higher level than you. If there are none, you will be setting the priorities.
+    -Knowing their priorities helps you align your efforts to support them effectively.
+- Understand Information Sources:
+    - Learn about the information sources your senior decision-makers rely on, including conversations and electronic data.
+    - Supplement these sources with better information and analysis to inspire valuable and relevant questions.
+- Evaluate decision-maker's Mindset:
+    - Assess what it would take to change your decision-maker's mind. Perform evaluations to see if they are open to new decisions and how you can assist.
+    - Automate Repetitive Decisions:
+    - Identify decisions that are made repeatedly and consider automating them using data-driven methods, machine learning, and AI.
+- Understand Organizational Needs:
+    - Work closely with decision-makers to understand their needs and the organization's needs. Think outside the box to find ways to help them.
+- Evaluate Data Sources and Infrastructure:
+    - Assess your organization's data sources, engineering, and infrastructure. Ensure you have the necessary components for effective data-driven decision-making.
+- Hire and Protect Data Experts:
+    - As you grow in seniority, hire data experts and protect their careers. Align them with important decisions and automation challenges to ensure their impact and career growth.
+- Consider Incentives and Group Decision-Making:
+    - Always take into account the principle-agent problem and think about incentives. Help make group decision-making effective.
+- Perform Good Work and Advocate for It:
+    - Deliver high-quality work and advocate for it within the organization. Collaboration skills and strong decision fundamentals are crucial.
+- People-Centric Solutions:
+    -Remember that most challenges, even technical ones, often boil down to people. Solid collaboration and decision-making skills will help you tackle various challenges effectively.
        
 
 
