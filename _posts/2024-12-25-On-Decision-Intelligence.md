@@ -16,12 +16,11 @@ My notes from the decision intelligence class
     6. [Being Decisive](#decisive)
     7. [Objectivity](#objectivity)
 3. [Decision Intelligence](#intel)
-    1.[Better Questions](#questions)
-    2.[Data Driven Decisions](#ddd)
-    3.[Better Answers](#bans)
-    4.[Decision Automation](#auto)
-   
-5. [Data Driven Leadership](#ddl)
+    1. [Better Questions](#questions)
+    2. [Data Driven Decisions](#ddd)
+    3. [Better Answers](#bans)
+    4. [Decision Automation](#auto)
+4. [Data Driven Leadership](#ddl)
     1. [Group Decision](#grp)
 
 ## Introduction <a name="introduction"></a>
@@ -163,5 +162,5 @@ The key is not to overspend or underspend on a decision
 ### Group Decisions <a name="grp"></a>
 - Shared Decision Responsibility: It's important to identify who the true decision makers are and how decision responsibility is shared within the group.
 - Benefits of Group Decisions: Group decisions can balance out individual biases and align more closely with the organization's vision by incorporating diverse perspectives.
-- Challenges of Group Decisions: Effective group decision-making requires higher skill levels, can take more time, and may be influenced by factors like charisma and status. It's crucial to design processes that maintain independence and clearly assign responsibilities
+- Challenges of Group Decisions: Effective group decision-making requires higher skill levels, can take more time, and may be influenced by factors like charisma and status. It's crucial to design processes that maintain independence and clearly assign responsibilities( avoiding diffusion of responsibility )
 
