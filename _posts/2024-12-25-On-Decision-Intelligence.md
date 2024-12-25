@@ -15,12 +15,13 @@ My notes from the decision intelligence class
     5. [Human Factors](#human)
     6. [Being Decisive](#decisive)
     7. [Objectivity](#objectivity)
-3. [Decision Intelligence](#intelligence)
+3. [Decision Intelligence](#intel)
     1.[Better Questions](#questions)
     2.[Data Driven Decisions](#ddd)
     3.[Better Answers](#bans)
     4.[Decision Automation](#auto)
-4. [Data Driven Leadership](#ddl)
+   
+5. [Data Driven Leadership](#ddl)
     1. [Group Decision](#grp)
 
 ## Introduction <a name="introduction"></a>
@@ -117,7 +118,7 @@ The key is not to overspend or underspend on a decision
 - Impact of Cognitive Biases: Your brain can play tricks on you, affecting how you process information. Even the wording of information can change your decisions.
 - Data and Objectivity: Data does not automatically equal objectivity. It's important to be aware of your cognitive biases and how they might affect your interpretation of data.
 
-## Decision Intelligence <a name="intelligence"></a>
+## Decision Intelligence <a name="intel"></a>
 - Data as a Tool: Data is a powerful tool for decision-making, but it's important to remember that data itself is just a means to an end.
 - Electronic Storage: Storing information electronically enhances memory and accessibility, making it easier to analyze and use.
 - **Limitations of Data**: Data is not inherently objective or true; it is influenced by the choices and biases of the people who collect and interpret it.
@@ -158,5 +159,9 @@ The key is not to overspend or underspend on a decision
 - Machine learning boils down to **optimise ___(objective) on __( Examples )**  
 
 ## Data Driven Leadership <a name="ddl"></a>
+
 ### Group Decisions <a name="grp"></a>
+- Shared Decision Responsibility: It's important to identify who the true decision makers are and how decision responsibility is shared within the group.
+- Benefits of Group Decisions: Group decisions can balance out individual biases and align more closely with the organization's vision by incorporating diverse perspectives.
+- Challenges of Group Decisions: Effective group decision-making requires higher skill levels, can take more time, and may be influenced by factors like charisma and status. It's crucial to design processes that maintain independence and clearly assign responsibilities
 
