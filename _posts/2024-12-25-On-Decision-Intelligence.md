@@ -11,6 +11,7 @@ My notes from the decision intelligence class
     1. [Decision Vs Outcome](#decvout)
     2. [Dangers of outcome bias](#outbias)
     3. [Difficult Decisions](#difdec)
+    4. [Setting Goals](#goals)
 3. [Another paragraph](#paragraph2)
 
 ## Introduction <a name="introduction"></a>
@@ -60,7 +61,23 @@ This section goes over - the differences between a decision and an outcome, outc
     - Social consequences & social effects: scrutiny and consequences
     - Internal conflicts: Conflict of incentives
     - Adversial effects: competition
-- when a decision seems complex, pause, slow down and re-evaluate 
+- when a decision seems complex, pause, slow down and re-evaluate
+
+### How to set Goals <a name="goals"></a>
+- Before setting goals, think about the priorities and opportunities
+- when thinking about priorities,
+    - Start by thinking of non-priorities
+    - Some of these might be other people's priorities, but not yours
+- Next start thinking about your opportunities
+- Two classic mistakes while setting goals are - being too concrete & being too vague
+- The trick is to have layers of goals that serve different purposes for you. Three kinds of goals -
+    - Outcome Goals: The win that you are interested in. It might be hard to measure and hence vague. Ex: Be more healthy
+    - Performance Goal: Measurable and under your control. Can be aspirational. Ex: run 5 miles in under 45 mins
+    - Process Goal: Measurable and fully under your control.Ex: Run 45mins every other day
+- **Never allow the process goal to take over the most important**
+- 
+
+  
 
 
 
