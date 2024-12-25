@@ -22,6 +22,7 @@ My notes from the decision intelligence class
     4. [Decision Automation](#auto)
 4. [Data Driven Leadership](#ddl)
     1. [Group Decision](#grp)
+    2. [Career Making](#career)
 
 ## Introduction <a name="introduction"></a>
 - Two things determine the quality of your life: luck and the quality of your decisions. You can control only one of them
@@ -134,7 +135,7 @@ The key is not to overspend or underspend on a decision
 ### Data Driven Decisions <a name="ddd"></a>
 - When using data for decisions watch out for confirmation bias i.e. when you are looking for data to back the decision you already made
 - Avoiding Confirmation Bias: To make a truly data-driven decision, it's crucial to set your goals and criteria before looking at the data to avoid confirmation bias.
-- Separate Data Sets: Use separate data sets for analytics and statistics to ensure that your questions and answers are not influenced by the same data points.
+- Separate Data Sets: Use separate data sets for analytics and statistics to ensure that the same data points do not influence your questions and answers.
 - Pre-Decision Homework: Decision-makers should do their homework and define what the data means to them before analyzing it to improve decision quality.
 
 ### Better Answers <a name="bans"></a>
@@ -160,10 +161,36 @@ The key is not to overspend or underspend on a decision
 ## Data Driven Leadership <a name="ddl"></a>
 
 ### Group Decisions <a name="grp"></a>
-- **expand on this**
-- Shared Decision Responsibility: It's important to identify who the true decision makers are and how decision responsibility is shared within the group.
-- Benefits of Group Decisions: Group decisions can balance out individual biases and align more closely with the organization's vision by incorporating diverse perspectives.
-- Challenges of Group Decisions: Effective group decision-making requires higher skill levels, can take more time, and may be influenced by factors like charisma and status. It's crucial to design processes that maintain independence and clearly assign responsibilities( avoiding diffusion of responsibility )
+- Critical to diagnose who the key decision makers are and how is the decision making responsibility shared among them
+- Benefits of group decision making 
+    - Protects against individual blind spots
+    - Balance extreme tendencies
+    - Foil tiredness
+    - Guardrails against highly unwise decisions
+    - Balances individual incentives
+ - The most fool-proof way of avoiding the principal-agent problem is to introduce constraints
+ - Downsides to group decision making
+     - Increases difficulty
+     - Increases time to make a decision
+     - Lost independence
+     - Note takers in a group setting have outsized influence
+     - watch out for diffusion of responsibility.
+  - One way is to decrease the number of actual decision-makers while increasing the number of advisors
+  - Also key to understanding whether the group is convened to ratify a group decision or to make a decision
+  - Decision responsibility is unequal among a group
 
+### Career Making <a name="career"></a>
+- Once we know the decision maker, a powerful question to ask is "What would it take to change your mind?"
+- Helps in identifying if the individual is responsible for the decision
+- If no information can change someone's mind, there is no decision to be made. It is mere persuasion
+- The above question also helps in -
+    - Understanding the decision makers default action
+    - tells you the decision metric and criteria
+- A few good follow-up questions are -
+    - How nervous are you?
+    - How important is the decision?
+    - How badly can it go?     
+       
+       
 
 
