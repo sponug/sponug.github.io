@@ -93,10 +93,10 @@ The key is not to overspend or underspend on a decision
   - needs structure 
 
 ### Human Elements In Decision Making <a name="human"></a>
--Humans are influenced by biological factors: Our decision-making can be suboptimal due to factors like lack of sleep, low blood sugar, stress, and strong emotions.
--Pre-hacking yourself: Like athletes create optimal conditions for performance, you should create optimal conditions for important decisions. Avoid making critical decisions when you're not at your best.
--Principal-agent problem analogy: Long-term goals (principal) and short-term desires (agent) can conflict. Setting constraints can help align short-term actions with long-term goals.
--These points highlight the importance of understanding and managing the biological and psychological factors that affect our decision-making
+- Humans are influenced by biological factors: Our decision-making can be suboptimal due to factors like lack of sleep, low blood sugar, stress, and strong emotions.
+- Pre-hacking yourself: Like athletes create optimal conditions for performance, you should create optimal conditions for important decisions. Avoid making critical decisions when you're not at your best.
+- Principal-agent problem analogy: Long-term goals (principal) and short-term desires (agent) can conflict. Setting constraints can help align short-term actions with long-term goals.
+- These points highlight the importance of understanding and managing the biological and psychological factors that affect our decision-making
 
   
 
