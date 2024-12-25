@@ -14,6 +14,7 @@ My notes from the decision intelligence class
     4. [Setting Goals](#goals)
     5. [Human Factors](#human)
     6. [Being Decisive](#decisive)
+    7. [Objectivity](#objectivity)
 3. [Another paragraph](#paragraph2)
 
 ## Introduction <a name="introduction"></a>
@@ -105,7 +106,7 @@ The key is not to overspend or underspend on a decision
 - Handling Emotions: When all options seem bad, choose the least worst one and execute it. Avoid getting stuck in emotional grief over suboptimal choices.
 - Similar Options: If options are very similar in value, don't over-optimize. Save your energy for more significant decisions.
 
-### Objectivity <a name="objctivity"></a>
+### Objectivity <a name="objectivity"></a>
 - Confirmation Bias: This is a psychological effect where your pre-existing beliefs influence how you perceive and interpret information, making it difficult to remain objective.
 - Impact of Cognitive Biases: Your brain can play tricks on you, affecting how you process information. Even the wording of information can change your decisions.
 - Data and Objectivity: Data does not automatically equal objectivity. It's important to be aware of your cognitive biases and how they might affect your interpretation of data.
