@@ -86,4 +86,4 @@ exclude:
   - README.md
   - CNAME
 # to publish faster
-theme: minima
+# theme: minima
