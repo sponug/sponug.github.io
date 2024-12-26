@@ -85,3 +85,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
+# to publish faster
+theme: minima
