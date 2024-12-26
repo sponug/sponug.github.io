@@ -3,7 +3,7 @@ layout: post
 title: On Latency
 ---
 
-Page to hold the weekly progress made on the blog
+Going down the rabbit hole to understand latency
 
 # Table of contents
 1. [Introduction](#introduction)
