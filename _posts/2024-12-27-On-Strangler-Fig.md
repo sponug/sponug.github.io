@@ -11,9 +11,10 @@ Understanding the strangler fig pattern . If you are wondering what the tree loo
 # Table of contents
 1. [Introduction](#introduction)
 2. [Motivating Example: API Migration](#motivate1)
-       1.[Technical Benefits](##benefits)
-          2.[No Free Lunches](##free)   
-4. [Another paragraph](#paragraph2)
+    1. [Technical Benefits](##benefits)
+    2. [No Free Lunches](##free)
+3. [Another paragraph](#paragraph2)
+
 
 ## This is the introduction <a name="introduction"></a>
 Imagine you have an old, wobbly LEGO castle you built years ago. It’s still standing, but pieces fall off every time you try to fix or add to it. Instead of smashing it and starting over (which could leave you with no castle for a while), you start building a new, stronger castle around the old one, piece by piece. At first, the old castle is still there, but as you keep adding new parts, you slowly take away the old bricks and replace them with shiny, new ones. Eventually, the old castle disappears, and you’re left with a much better, sturdier LEGO fortress. That’s basically how the strangler fig pattern works in software. You build a new system around an old one, gradually replacing bits until the old system isn’t needed anymore. It’s like upgrading your castle without knocking it down all at once.
