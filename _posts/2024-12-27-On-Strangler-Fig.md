@@ -16,6 +16,7 @@ Understanding the strangler fig pattern . If you are wondering what the tree loo
 3. [Monolith To Microservices](#monomicro)
     1. [Technical Benefits](##benefits)
     2. [Key Challenges](##challenge)
+4. [Further reading](#reading)
 
 
 ## This is the introduction <a name="introduction"></a>
@@ -118,7 +119,7 @@ While the Strangler Fig Pattern is a powerful strategy for migrating from legacy
 9. Longer Migration Time: The incremental nature of the Strangler Fig Pattern means migration can take time, especially for large, complex systems. This could lead to prolonged transitions where both old and new systems coexist, increasing the risk of errors and delays.
 Despite these challenges, the Strangler Fig Pattern remains a widely adopted, low-risk strategy when managing complex system migrations. It allows for gradual modernization without a disruptive "big bang" transition.
 
-
+## Further Reading <a name="reading"></a>
 
 
 
