@@ -123,6 +123,7 @@ Despite these challenges, the Strangler Fig Pattern remains a widely adopted, lo
 
 ## Further Reading <a name="reading"></a>
 [Here](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html)
+[Here](https://youtu.be/ml1Yb-ddGt0?si=x266BImz9_mdVCZ5)
 
 
 
