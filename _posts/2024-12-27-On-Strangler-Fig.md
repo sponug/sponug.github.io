@@ -5,7 +5,7 @@ title: On Strangler Fig Pattern
 
 Understanding the strangler fig pattern . If you are wondering what the tree looks like -
 
-![latency](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/Strangler-Fig.jpg)
+![latency](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/Strangler-Fig.png)
 
 
 # Table of contents
