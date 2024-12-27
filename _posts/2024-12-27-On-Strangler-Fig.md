@@ -11,7 +11,8 @@ Understanding the strangler fig pattern . If you are wondering what the tree loo
 # Table of contents
 1. [Introduction](#introduction)
 2. [Motivating Example: API Migration](#motivate1)
-       1.[Technical Benefits](##benefits)   
+       1.[Technical Benefits](##benefits)
+          2.[No Free Lunches](##free)   
 4. [Another paragraph](#paragraph2)
 
 ## This is the introduction <a name="introduction"></a>
@@ -43,6 +44,36 @@ Once you’re confident the new API is stable, you gradually increase the traffi
 - Zero Downtime: No need for a “big bang” release.
 - Incremental Risk Management: Roll back or forward easily.
 - Modernization Without Disruption: Business operations continue uninterrupted.
+### No Free Lunches <a name="lunch"></a> 
+
+While the strangler fig pattern is a great strategy for migrating APIs with minimal risk, it does come with some downsides and challenges to consider:
+
+1. Increased Complexity in Maintenance
+During the migration process, you’ll have both the old and new APIs running in parallel. This can increase the complexity of managing both systems at the same time. You’ll need to ensure that the proxy layer or API gateway handles routing correctly, and debugging can be more challenging when there are two versions of an API working simultaneously.
+
+2. Potential for Inconsistent Behavior
+As you gradually migrate endpoints, there’s a risk of having different behavior between the old and new API versions. This can confuse developers or consumers of the API, especially if there are inconsistencies in how errors are handled or how certain features are implemented. It’s crucial to ensure that both versions adhere to similar standards, but that can be harder to maintain over time.
+
+3. Increased Latency and Overhead
+Routing traffic through an API gateway adds an extra layer between the client and the server. While this is necessary for switching between the old and new systems, it can add some latency. Additionally, handling versioning and routing logic may lead to slight overhead in processing requests, especially if there are many endpoints to manage.
+
+4. Risk of Feature Gaps or Duplication
+If the migration isn’t well-planned, there might be gaps in functionality between the old and new APIs. For example, some features might not be fully migrated, or some edge cases might not have been accounted for in the new version. Additionally, you might end up duplicating work, where both the old and new systems need updates or bug fixes during the migration period.
+
+5. Longer Migration Timeline
+The gradual nature of the strangler fig pattern means that migration can take time—often much longer than a big-bang approach. If you have a large API with many endpoints, it can take months or even years to fully replace the old system. This might delay the benefits of the new system or cause friction if business needs demand faster results.
+
+6. Resource Drain
+Because you're running two systems in parallel, you need to allocate additional resources—both human and computational—to support both the old and new API during the transition. This can increase costs and require more ongoing attention from your development and operations teams.
+
+7. Testing and Version Compatibility
+When migrating incrementally, testing can be more complicated. You’ll need to test both versions of the API, ensure compatibility with consumers, and validate that the proxy layer is routing correctly. This can lead to longer testing cycles, especially when dependencies across different parts of the system aren’t clear.
+
+8. Technical Debt
+During migration, the old system is often left in a "zombie" state—still functional but not actively maintained. Over time, this can accumulate technical debt, especially if the legacy system requires bug fixes or updates to work with the new version. You might find yourself spending time patching the old system while also investing in the new one.
+
+Despite these downsides, the strangler fig pattern is a useful, low-risk strategy, especially when you're dealing with complex systems where a full migration would be too risky or disruptive. However, it’s important to weigh these trade-offs and ensure that you have the resources and time to handle them effectively.
+
 
 
 ## Another paragraph <a name="paragraph2"></a>
