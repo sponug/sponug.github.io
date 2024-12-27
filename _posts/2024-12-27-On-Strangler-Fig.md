@@ -13,7 +13,9 @@ Understanding the strangler fig pattern . If you are wondering what the tree loo
 2. [Motivating Example: API Migration](#motivate1)
     1. [Technical Benefits](##benefits)
     2. [No Free Lunches](##free)
-3. [Another paragraph](#paragraph2)
+3. [Monolith To Microservices](#monomicro)
+    1. [Technical Benefits](##benefits)
+    2. [Key Challenges](##challenge)
 
 
 ## This is the introduction <a name="introduction"></a>
@@ -77,5 +79,48 @@ Despite these downsides, the strangler fig pattern is a useful, low-risk strateg
 
 
 
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
+## Monolith to Microservices <a name="monomicro"></a>
+Migrating from a mainframe monolith to microservices involves several key steps:
+
+1. Assess the Current Mainframe Application:
+    - Identify core components, dependencies, and interactions with other systems.
+    - Prioritize critical parts for migration.
+2. Define the Target Microservices Architecture
+    - Decompose the mainframe’s functionality into smaller, self-contained services.
+    - Choose appropriate communication patterns (synchronous or asynchronous).
+3. Adopt the Strangler Fig Pattern
+    - Set up an API Gateway to route traffic between the mainframe and new microservices.
+    - Migrate components incrementally, using a dual-write system for data consistency during the transition.
+4. Modernize the Infrastructure
+    - Containerize microservices with Docker and manage them with Kubernetes.
+    - Implement CI/CD pipelines for automated deployment and testing.
+5. Migrate Data and Business Logic
+    - Gradually migrate data to modern databases and refactor business logic into microservices.
+    - Use event-driven architectures to sync data during the migration.
+6. Test and Validate
+    - Test new microservices and run the legacy system and new microservices in parallel to ensure smooth operation and data consistency.
+7. Full Cutover and Decommissioning
+    - Once migration is complete, cutover to the new system and decommission the mainframe.
+    - Monitor and optimize the new microservices for performance.
+
+### Key Challenges <a name="challenge"></a>
+
+While the Strangler Fig Pattern is a powerful strategy for migrating from legacy systems to modern architectures like microservices, there are several challenges to consider:
+
+1. Complexity in Integration: During the migration, you must integrate old and new systems, which can lead to complexity in maintaining two different architectures. Ensuring seamless data flow and consistency between the legacy system and microservices is challenging.
+2. Data Consistency: Synchronizing data between the old and new systems can be difficult. In a dual-write setup, both systems might handle data differently, leading to potential inconsistencies that must be resolved carefully.
+3. Increased Operational Overhead: Maintaining both the legacy and new systems during migration can lead to extra operational overhead, including managing more infrastructure, ensuring compatibility, and providing support for both environments.
+4. Performance Issues: Routing traffic between the old and new systems might introduce latency. The API Gateway or other routing mechanisms could become bottlenecks, particularly if the integration isn’t well-optimized.
+5. Resource and Skill Gaps: Migrating to microservices requires expertise in modern technologies like containerization, cloud platforms, and CI/CD pipelines. There may be a skill gap within the team that requires training or external resources.
+6. Stakeholder Buy-In: Convincing stakeholders to adopt an incremental migration can be difficult. The gradual nature of the transition might not provide the immediate, visible results that some business stakeholders expect, leading to potential resistance.
+7. Coordinating Between Teams: The migration often involves multiple teams working on different parts of the system. Ensuring alignment and coordinating efforts across teams can be difficult, especially when dealing with tight timelines and complex dependencies.
+8. Legacy System Limitations: Legacy systems may not be easy to modify, and their tight coupling with other systems could make it difficult to isolate them for migration. Additionally, some mainframe technologies may lack the flexibility to support modern integration methods (e.g., RESTful APIs).
+9. Longer Migration Time: The incremental nature of the Strangler Fig Pattern means migration can take time, especially for large, complex systems. This could lead to prolonged transitions where both old and new systems coexist, increasing the risk of errors and delays.
+Despite these challenges, the Strangler Fig Pattern remains a widely adopted, low-risk strategy when managing complex system migrations. It allows for gradual modernization without a disruptive "big bang" transition.
+
+
+
+
+
+
+
