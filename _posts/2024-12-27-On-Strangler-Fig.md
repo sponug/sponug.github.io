@@ -39,7 +39,9 @@ Step 3: Set Up a Proxy or API Gateway
 You introduce a proxy or API gateway to route requests between the old and new systems. Initially, all requests to GET /users still hit the legacy API, but the proxy has the ability to send a portion of the requests to the new API for testing. Over time, you increase the traffic directed to the new API as confidence in its stability grows.
 
 Step 4: Gradual Traffic Shift
-You can use techniques like canary releases or feature flags to slowly send some percentage of traffic (e.g., 10% or 25%) to the new GET /users endpoint. This allows you to test how the new API performs without fully migrating the users yet. Meanwhile, the old GET /users endpoint continues to serve the majority of the traffic, so there’s no disruption to your users.
+You can use techniques like canary releases* or feature flags to slowly send some percentage of traffic (e.g., 10% or 25%) to the new GET /users endpoint. This allows you to test how the new API performs without fully migrating the users yet. Meanwhile, the old GET /users endpoint continues to serve the majority of the traffic, so there’s no disruption to your users.
+
+*A canary release is a software deployment strategy where a new version of an application is rolled out to a small subset of users or systems before it’s made available to everyone. The term "canary release" comes from the historical use of canaries in coal mines, where miners would take a canary down with them to detect harmful gases. If the canary showed signs of distress, it was a signal for the miners to evacuate. In the same way, a canary release helps identify potential issues or bugs early on, minimizing risk before a full deployment
 
 Step 5: Full Migration
 Once you’re confident the new API is stable, you gradually increase the traffic to the new GET /users endpoint. You keep testing it against production traffic, fixing any issues along the way, until eventually, all requests go to the new endpoint and the old API can be decommissioned.
