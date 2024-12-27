@@ -120,6 +120,7 @@ While the Strangler Fig Pattern is a powerful strategy for migrating from legacy
 Despite these challenges, the Strangler Fig Pattern remains a widely adopted, low-risk strategy when managing complex system migrations. It allows for gradual modernization without a disruptive "big bang" transition.
 
 ## Further Reading <a name="reading"></a>
+[Here](https://docs.aws.amazon.com/prescriptive-guidance/latest/cloud-design-patterns/strangler-fig.html)
 
 
 
