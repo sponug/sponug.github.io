@@ -3,6 +3,7 @@ layout: post
 title: Intro To Gen AI
 ---
 
+
 # Table of contents
 1. [Introduction](#introduction)
 2. [Notes](#paragraph1)
@@ -34,6 +35,34 @@ title: Intro To Gen AI
         b) learn JavaScript
         c) learn Fortran
     """
+- **Improve response quality by including examples**:Another way to improve response quality is to add examples in your prompt. The LLM learns in-context from the examples on how to respond. Typically, one to five examples (shots) are enough to improve the quality of responses. Including too many examples can cause the model to over-fit the data and reduce the quality of responses.Similar to classical model training, the quality and distribution of the examples is very important. Pick examples that are representative of the scenarios that you need the model to learn, and keep the distribution of the examples (e.g. number of examples per class in the case of classification) aligned with your actual distribution.
+- **Zero-shot prompt**: Below is an example of zero-shot prompting, where you don't provide any examples to the LLM within the prompt itself.
+prompt = """Decide whether a Tweet's sentiment is positive, neutral, or negative.
+​Tweet: I loved the new YouTube video you made!
+Sentiment:
+"""
+- **One-shot prompt**
+Below is an example of one-shot prompting, where you provide one example to the LLM within the prompt to give some guidance on what type of response you want.
+prompt = """Decide whether a Tweet's sentiment is positive, neutral, or negative.
+​Tweet: I loved the new YouTube video you made!
+Sentiment: positive
+​Tweet: That was awful. Super boring 😠
+Sentiment:
+"""
+- **Few-shot prompt**
+Below is an example of few-shot prompting, where you provide a few examples to the LLM within the prompt to give some guidance on what type of response you want.
+prompt = """Decide whether a Tweet's sentiment is positive, neutral, or negative.
+​
+Tweet: I loved the new YouTube video you made!
+Sentiment: positive
+​
+Tweet: That was awful. Super boring 😠
+Sentiment: negative
+​
+Tweet: Something surprised me about this video - it was actually original. It was not the same old recycled stuff that I always see. Watch it - you will not regret it.
+Sentiment:
+"""
+​- **Choosing between zero-shot, one-shot, few-shot prompting methods**: Which prompt technique to use will solely depends on your goal. The zero-shot prompts are more open-ended and can give you creative answers, while one-shot and few-shot prompts teach the model how to behave so you can get more predictable answers that are consistent with the examples provided.
 
 
 
