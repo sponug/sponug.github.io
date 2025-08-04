@@ -7,6 +7,7 @@ title: Intro To Gen AI
 1. [Introduction](#introduction)
 2. [Notes](#paragraph1)
 
+
    
 ## Introduction <a name="introduction"></a>
 45 minute introduction to Gen AI from Google. [Link](https://www.cloudskillsboost.google/paths/118/course_templates/536)
