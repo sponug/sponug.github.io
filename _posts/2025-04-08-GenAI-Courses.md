@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weekly Log
+title: Gen AI Courses
 ---
 
 Page to hold the weekly progress made on the blog
