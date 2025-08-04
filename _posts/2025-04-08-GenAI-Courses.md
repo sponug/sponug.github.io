@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Gen AI Courses
+title: Intro To Gen AI
 ---
-
-Page to hold the weekly progress made on the blog
 
 # Table of contents
 1. [Introduction](#introduction)
@@ -12,7 +10,7 @@ Page to hold the weekly progress made on the blog
 3. [Another paragraph](#paragraph2)
 
 ## This is the introduction <a name="introduction"></a>
-Some introduction text, formatted in heading 2 style
+45 minute introduction to Gen AI from Google. 
 
 ## Some paragraph <a name="paragraph1"></a>
 The first paragraph text
