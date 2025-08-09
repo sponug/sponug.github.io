@@ -26,7 +26,7 @@ This project was my **first attempt at building an agent**. The primary goals we
 4. **Work within a strict time frame** – complete the entire process, including this write-up, in **4–5 hours**.
 5. **Focus on learning over perfection** – prioritize understanding the workflow of creating and testing an agent over building a production-ready tool.
 
-
+   
 ## Prerequisites <a name="prereqs"></a>
 Before starting, complete the following setup steps:
 
@@ -145,3 +145,171 @@ The script:
 - Adds the AI-generated score and feedback as a comment on the Jira issue.
 - Includes error handling and user-friendly command-line usage.
 - Each iteration introduced new capabilities, making the script more functional and reliable
+
+```
+#!/usr/bin/env python3
+# /// script
+# requires-python = ">=3.9"
+# dependencies = ["requests"]
+# ///
+
+import os
+import sys
+import requests
+from typing import Dict, List
+from pathlib import Path
+from dotenv import load_dotenv
+
+dotenv_path = Path('.') / '.env'
+print(f"Loading env from {dotenv_path.resolve()}")
+load_dotenv(dotenv_path)
+
+# -----------------------------
+# Config: Set these as environment variables before running
+# -----------------------------
+JIRA_BASE_URL = os.getenv("JIRA_BASE_URL")  # e.g. "https://yourdomain.atlassian.net"
+JIRA_EMAIL = os.getenv("JIRA_EMAIL")
+JIRA_API_TOKEN = os.getenv("JIRA_API_TOKEN")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+
+if not all([JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN, OPENAI_API_KEY]):
+    print("Error: Missing one or more environment variables: JIRA_BASE_URL, JIRA_EMAIL, JIRA_API_TOKEN, OPENAI_API_KEY")
+    sys.exit(1)
+
+# -----------------------------
+# Jira API Functions
+# -----------------------------
+
+def get_jira_story(issue_key: str) -> Dict:
+    """Fetch Jira story data."""
+    url = f"{JIRA_BASE_URL}/rest/api/3/issue/{issue_key}"
+    auth = (JIRA_EMAIL, JIRA_API_TOKEN)
+    headers = {"Accept": "application/json"}
+    r = requests.get(url, headers=headers, auth=auth)
+    r.raise_for_status()
+    return r.json()
+
+def update_jira_story_comment(issue_key: str, comment: str):
+    """Add a comment to the Jira story."""
+    url = f"{JIRA_BASE_URL}/rest/api/3/issue/{issue_key}/comment"
+    auth = (JIRA_EMAIL, JIRA_API_TOKEN)
+    headers = {"Accept": "application/json", "Content-Type": "application/json"}
+    
+    payload = {
+        "body": {
+            "type": "doc",
+            "version": 1,
+            "content": [
+                {
+                    "type": "paragraph",
+                    "content": [
+                        {
+                            "text": comment,
+                            "type": "text"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+    r = requests.post(url, headers=headers, auth=auth, json=payload)
+    r.raise_for_status()
+
+
+# -----------------------------
+# Helper to extract plain text from Jira rich text format
+# -----------------------------
+
+def extract_text_from_content(content: List[Dict]) -> str:
+    text = ""
+    for block in content:
+        if "content" in block:
+            for inner in block["content"]:
+                text += inner.get("text", "") + "\n"
+    return text
+
+# -----------------------------
+# OpenAI API Function
+# -----------------------------
+
+def score_description_with_openai(story: str) -> str:
+    """Score the story and provide improvement feedback."""
+
+    system_prompt = (
+        "You are an expert in software requirements analysis with a focus on agile methodologies. "
+        "Evaluate the acceptance criteria for the user story below based on these patterns:\n\n"
+        "1. Readable\n2. Testable\n3. Implementation Agnostic\n4. Actionable When Statement\n"
+        "5. Strong Verb Usage\n6. Specific to the Story\n7. Tell a Story\n\n"
+        "Please provide:\n"
+        "- A numeric score from 1 to 10 for each of the seven patterns listed,\n"
+        "- A summary of overall score,\n"
+        "- Specific suggestions for improvement to make the acceptance criteria better."
+        "\n\nAcceptance Criteria:\n"
+        f"{story}"
+    )
+
+    messages = [
+        {"role": "system", "content": system_prompt},
+    ]
+
+    headers = {
+        "Content-Type": "application/json",
+        "Authorization": f"Bearer {OPENAI_API_KEY}"
+    }
+
+    payload = {
+        "model": "gpt-4",
+        "messages": messages,
+        "temperature": 0
+    }
+
+    print("Sending acceptance criteria to OpenAI...")
+    r = requests.post("https://api.openai.com/v1/chat/completions", headers=headers, json=payload)
+    r.raise_for_status()
+    return r.json()["choices"][0]["message"]["content"]
+
+# -----------------------------
+# Main
+# -----------------------------
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python jira_score_story.py ISSUE_KEY")
+        sys.exit(1)
+
+    issue_key = sys.argv[1]
+
+    try:
+        story = get_jira_story(issue_key)
+    except requests.HTTPError as e:
+        print(f"Failed to fetch Jira issue {issue_key}: {e}")
+        sys.exit(1)
+
+    description_field = story["fields"].get("description", "")
+
+    if isinstance(description_field, dict) and "content" in description_field:
+        description_text = extract_text_from_content(description_field["content"]).strip()
+    elif isinstance(description_field, str):
+        description_text = description_field
+    else:
+        description_text = ""
+
+    if not description_text:
+        print(f"No description found for {issue_key}")
+        sys.exit(1)
+
+    print(f"Scoring Jira story {issue_key}...")
+    score_text = score_description_with_openai(description_text)
+    print(f"\nScore & Feedback:\n{score_text}")
+
+    print("\nAdding score and feedback as a comment on the Jira story...")
+    try:
+        update_jira_story_comment(issue_key, f"### AI Acceptance Criteria Review\n\n{score_text}")
+    except requests.HTTPError as e:
+        print(f"Failed to update Jira issue {issue_key} comment: {e}")
+        sys.exit(1)
+
+    print("Done.")
+
+if __name__ == "__main__":
+    main()
