@@ -3,7 +3,6 @@ layout: post
 title: My First Agent
 ---
 
-Page to hold the weekly progress made on the blog
 
 # Table of contents
 1. [Goals](#goals)
