@@ -13,6 +13,7 @@ Page to hold the weekly progress made on the blog
 5. [Story Evaluation](#eval)
 6. [Solution Approach](#sol)
 7. [Implementation](#implementation)
+8. [Possible Enhancements](#enhancements)
 
 ## Goals of This Exercise <a name="goals"></a>
 This project was my **first attempt at building an agent**. The primary goals were:
@@ -146,5 +147,10 @@ The script:
 - Includes error handling and user-friendly command-line usage.
 - Each iteration introduced new capabilities, making the script more functional and reliable
 
-[Code](https://pastebin.com/F2SuuVZS)
+[Code Here](https://pastebin.com/F2SuuVZS)
 
+## Enhancements <a name="enhancements"></a>
+Possible enhancements -
+- Automated Continuous Evaluation: Integrate the agent into the development workflow to automatically evaluate and provide feedback on user stories whenever they are created or updated, ensuring ongoing quality checks without manual triggers.
+- Customizable Evaluation Criteria: Allow teams to define or adjust the acceptance criteria patterns and scoring parameters based on their specific processes or domain needs, making the agent adaptable across different projects or organizations.
+- Advanced Reporting and Insights: Develop a dashboard or reporting system that aggregates evaluation results over time, highlighting trends, common issues, and areas for improvement to help teams enhance their agile practices strategically.
