@@ -166,6 +166,7 @@ Wrong password doesn’t work.
 It should look nice.
 
 **Fedback from Woz**
+
 Evaluation:
 1. Readable: 9/10 - The acceptance criteria are clear and easy to understand.
 2. Testable: 8/10 - Most of the criteria are testable, but it could be more specific about what constitutes "easy to navigate" or "an error message".
