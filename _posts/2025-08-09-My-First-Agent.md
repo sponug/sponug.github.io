@@ -12,6 +12,7 @@ Page to hold the weekly progress made on the blog
 4. [Why it matters](#why)
 5. [Story Evaluation](#eval)
 6. [Solution Approach](#sol)
+7. [Implementation](#implementation)
 
 ## Goals of This Exercise <a name="goals"></a>
 This project was my **first attempt at building an agent**. The primary goals were:
@@ -131,6 +132,16 @@ To address the problem of substandard user stories, I built a minimal AI-driven 
 3. **Improvement Suggestions** – Generate actionable feedback for each dimension.
 4. **Optional Update** – Push updated acceptance criteria or comments back into Jira.
 
-![Solution Diagram](solution.png)
-*Figure: High-level architecture and workflow of the first agent.*
----
+![Solution Diagram](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/Solution.png)
+
+## Implementation <a name="implementation"></a>
+This Python script is the fourth iteration of a project where I built the functionality step by step, adding each piece incrementally to create a robust tool.
+
+The script:
+- Loads environment variables for Jira and OpenAI API credentials securely.
+- Fetches a Jira story by its issue key using Jira's REST API.
+- Extracts the acceptance criteria description from Jira's rich text format.
+- Sends this description to OpenAI’s GPT-4 API to score it on key quality patterns and provide improvement feedback.
+- Adds the AI-generated score and feedback as a comment on the Jira issue.
+- Includes error handling and user-friendly command-line usage.
+- Each iteration introduced new capabilities, making the script more functional and reliable
