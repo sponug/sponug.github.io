@@ -147,6 +147,7 @@ The script:
 - Each iteration introduced new capabilities, making the script more functional and reliable
 
 ```
+
 #!/usr/bin/env python3
 # /// script
 # requires-python = ">=3.9"
