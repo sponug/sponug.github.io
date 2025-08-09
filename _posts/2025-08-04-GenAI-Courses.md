@@ -4,6 +4,7 @@ title: Intro To Gen AI
 ---
 
 
+
 # Table of contents
 1. [Introduction](#introduction)
 2. [Notes](#paragraph1)
