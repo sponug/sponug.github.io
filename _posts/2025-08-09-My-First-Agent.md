@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My First Agent
+title: My First Agent - Woz
 ---
 
 Notes from vibe coding my first agent
@@ -14,6 +14,7 @@ Notes from vibe coding my first agent
 6. [Solution Approach](#sol)
 7. [Implementation](#implementation)
 8. [Possible Enhancements](#enhancements)
+9. [Sample Results](#results)
 
 ## Goals of This Exercise <a name="goals"></a>
 This project was my **first attempt at building an agent**. The primary goals were:
@@ -154,3 +155,35 @@ Possible enhancements -
 - Automated Continuous Evaluation: Integrate the agent into the development workflow to automatically evaluate and provide feedback on user stories whenever they are created or updated, ensuring ongoing quality checks without manual triggers.
 - Customizable Evaluation Criteria: Allow teams to define or adjust the acceptance criteria patterns and scoring parameters based on their specific processes or domain needs, making the agent adaptable across different projects or organizations.
 - Advanced Reporting and Insights: Develop a dashboard or reporting system that aggregates evaluation results over time, highlighting trends, common issues, and areas for improvement to help teams enhance their agile practices strategically.
+
+## Sample Results <a name="results"></a>
+
+Lets assume you have the below story -
+**Description**: As a user, I want a login page so that I can log in.
+**Acceptance Criteria**:
+User can log in.
+Wrong password doesn’t work.
+It should look nice.
+
+**Fedback from Woz**
+Evaluation:
+1. Readable: 9/10 - The acceptance criteria are clear and easy to understand.
+2. Testable: 8/10 - Most of the criteria are testable, but it could be more specific about what constitutes "easy to navigate" or "an error message".
+3. Implementation Agnostic: 10/10 - The criteria do not dictate how the functionality should be implemented.
+4. Actionable When Statement: 6/10 - The criteria could be more specific about when certain actions should occur.
+5. Strong Verb Usage: 7/10 - The criteria use verbs like "should be" and "should accept", but could use stronger, more specific verbs.
+6. Specific to the Story: 8/10 - The criteria are specific to the user story, but could be more detailed.
+7. Tell a Story: 7/10 - The criteria tell a story, but it could be more engaging and detailed.
+
+Overall Score: 55/70
+
+Suggestions for Improvement:
+- Be more specific about what constitutes "easy to navigate". For example, "The login page should have clearly labeled fields for username and password."
+- Specify what the error message should say when incorrect credentials are entered.
+- Include a criterion about what should happen when the 'forgot password' link is clicked.
+- Use stronger verbs. For example, instead of "should be", use "must be".
+- Make the story more engaging by adding more detail. For example, "As a user who has forgotten their password, I want to be able to click on a 'forgot password'   link and be guided through the process of resetting my password."
+
+
+
+
