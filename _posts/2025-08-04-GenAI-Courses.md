@@ -3,6 +3,7 @@ layout: post
 title: Intro To Gen AI
 ---
 
+Notes from a course I just completed
 
 # Table of contents
 1. [Introduction](#introduction)
