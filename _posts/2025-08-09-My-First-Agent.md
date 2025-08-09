@@ -3,6 +3,7 @@ layout: post
 title: My First Agent
 ---
 
+Notes from vibe coding my first agent
 
 # Table of contents
 1. [Goals](#goals)
