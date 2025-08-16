@@ -9,8 +9,8 @@ This is a personal technical experiment that I conducted independently and is no
 # Table of contents
 1. [Introduction](#introduction)
 2. [PDF's Into Searchable DB](#tech1)
-3. [Are there any surprises?](#tech2)
-4. [Interface for querying](#tech3)
+3. [Topics Across 10 Years](#tech2)
+4. [Querying with the Business Model Canvas](#tech3)
 
 ## Introduction <a name="introduction"></a>
 Annual reports are rich in information but notoriously hard to mine for structured insights. I wanted to see if modern AI tooling could automatically map 10 years of annual reports into the well-known Business Model Canvas (BMC) framework.
@@ -22,7 +22,7 @@ The primary **goals** were:
 - Generate insights using BMC.
 - Focus on learning over perfection
 
-## PDF's Into Searchable DB <a name="tech1"></a>
+## PDF's Into Searchable DB<a name="tech1"></a>
 
 This script’s job is to **read all your PDF reports, chop them into small chunks of text, generate AI embeddings, and save them into a Chroma database** so you can later query them with an LLM.
 
@@ -36,7 +36,7 @@ This script **turns your PDFs into a searchable database** by chopping them into
 
 I did this experiment on publicly available annual reports from 2015-2024
 
-## Are there any surprises <a name="tech2"></a>
+## Topics Across 10 Years <a name="tech2"></a>
 After clustering 10 years of reports, here are the most common recurring themes -
 
 1. Customer-Centric Service Approach (4522 chunks)
@@ -56,7 +56,7 @@ Most of these are expected for a major bank: customer service, financial perform
 
 This script takes all the AI-embedded chunks from your reports, groups them into clusters of related content, then uses GPT to give each cluster a human-readable topic name. Finally, it shows you the top recurring themes across the reports.
 
-## Interface for querying <a name="tech3"></a>
+## Querying with the Business Model Canvas<a name="tech3"></a>
 This script builds a Q&A app for your annual reports.You ask a business question (freeform or guided by BMC blocks).
 It searches the last 10 years of reports. GPT summarizes the findings into a clean, source-cited answer.
 
