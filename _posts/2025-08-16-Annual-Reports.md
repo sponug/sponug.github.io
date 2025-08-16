@@ -9,7 +9,8 @@ This is a personal technical experiment that I conducted independently and is no
 # Table of contents
 1. [Introduction](#introduction)
 2. [PDF's Into Searchable DB](#tech1)
-3. [Are there any surprises](#tech2)
+3. [Are there any surprises?](#tech2)
+4. [Interface for querying](#tech3)
 
 ## This is the introduction <a name="introduction"></a>
 The primary **goals** were:
@@ -75,6 +76,9 @@ Lets now check what some common themes across the 10 years of annual reports are
 [Source code for topics.py](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/topics.py)
 This script takes all the AI-embedded chunks from your reports, groups them into clusters of related content, then uses GPT to give each cluster a human-readable topic name. Finally, it shows you the top recurring themes across the reports.
 
-## Another paragraph <a name="paragraph2"></a>
-The second paragraph text
+## Interface for querying <a name="tech3"></a>
+This script builds a Q&A app for your annual reports.You ask a business question (freeform or guided by BMC blocks).
+It searches the last 10 years of reports. GPT summarizes the findings into a clean, source-cited answer.
+
+[Source code for app.py](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/app.py)
 
