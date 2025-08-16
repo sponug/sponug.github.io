@@ -62,5 +62,9 @@ It searches the last 10 years of reports. GPT summarizes the findings into a cle
 
 ![query](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/query.png)
 
+[bmc](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/bmc.png)
+
+
+
 [Source code for app.py](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/app.py)
 
