@@ -57,7 +57,7 @@ This script’s job is to **read all your PDF reports, chop them into small chun
 ## In Simple Terms
 This script **turns your PDFs into a searchable database** by chopping them into small pieces, converting them into AI-friendly vectors, and storing them in Chroma. Later, you can use this database to **ask questions across all your PDFs** instead of reading them manually.
 
-[Source code for ingest.py](images/ingest.py) 
+[Source code for ingest.py]([images/ingest.py](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/ingest.py)) 
 
 ### Sub paragraph <a name="subparagraph1"></a>
 This is a sub paragraph, formatted in heading 3 style
