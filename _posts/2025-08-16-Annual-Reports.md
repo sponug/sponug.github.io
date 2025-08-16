@@ -51,7 +51,8 @@ This script’s job is to **read all your PDF reports, chop them into small chun
 ### 6. Logging Progress
 - Prints progress as it processes each PDF.  
 - Shows how many chunks were stored and how long it took.  
-- At the end, gives a summary: how many PDFs succeeded, failed, and where to look for errors.  
+- At the end, gives a summary: how many PDFs succeeded, failed, and where to look for errors.
+   
 ---
 
 This script **turns your PDFs into a searchable database** by chopping them into small pieces, converting them into AI-friendly vectors, and storing them in Chroma. Later, you can use this database to **ask questions across all your PDFs** instead of reading them manually.
