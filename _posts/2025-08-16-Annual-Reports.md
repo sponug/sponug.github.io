@@ -69,14 +69,18 @@ This script takes all the AI-embedded chunks from your reports, groups them into
 
 ## Querying with the Business Model Canvas<a name="tech3"></a>
 This script builds a Q&A app for your annual reports.You ask a business question (freeform or guided by BMC blocks).
-It searches the last 10 years of reports. GPT summarizes the findings into a clean, source-cited answer.
+It searches the last 10 years of reports. GPT summarizes the findings into a clean, source-cited answer. The streamlit interface looks like below -
 
 ![query](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/query.png)
 
-![bmc](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/bmc.PNG)
+
 
 ## Business Model Canvas<a name="business"></a>
 The Business Model Canvas (BMC) is a strategic management tool that helps you visualize, design, and analyze a company’s business model. Created by Alexander Osterwalder, it breaks a business down into nine building blocks that capture how the organization creates, delivers, and captures value.
+
+![bmc](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/bmc.PNG)
+
+I have highlighted sample questions and responses across all the 9 areas of the business model canvas below
 
 ### Customer Segments <a name="customer"></a>
 > **Who are the company’s main customer groups?**
