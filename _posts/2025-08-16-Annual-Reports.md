@@ -16,7 +16,7 @@ This is a personal technical experiment that I conducted independently and is no
    2. [Value Propositions](#valprops)
    3. [Channels](#Channels)
    4. [Customer Relationships](#custrel)
-   5. [Revenue Streams - revisit](#rev)
+   5. [Revenue Streams](#rev)
    6. [Key Resources - revisit](#res)
    7. [Key Activities - revisit](#activities)
    8. [Key Partnerships - revisit](#part)
@@ -118,6 +118,14 @@ These strategies collectively demonstrate the company's efforts to maintain and 
 
 >How does management describe building trust or brand loyalty?
 >Management describes building trust or brand loyalty by addressing stakeholder perceptions and expectations. They focus on reducing complexity and resolving issues that could impact customers and reputation, thereby strengthening processes to align with stakeholder beliefs and expectations [S1]. Additionally, they recognize that reputation risk can arise from gaps between stakeholder perceptions and the company's activities, which can affect the brand positively or negatively. Stakeholder perceptions include views on financial performance, quality of products or services, and management quality [S2].
+
+### Revenue Streams <a name="rev"></a>
+>What are the main sources of revenue?
+>Based on the context provided, the main sources of revenue for the company over the last 10 fiscal years (2013–2022) are geographically segmented. The primary sources of revenue are:
+Australia: This is the largest source of revenue, consistently contributing the majority share. For instance, in 2021, 2020, and 2019, Australia accounted for 85.5%, 85.6%, and 84.2% of the total revenue, respectively [S3].
+New Zealand: This is the second-largest source of revenue. In 2021, 2020, and 2019, New Zealand contributed 13.2%, 11.3%, and 12.2% of the total revenue, respectively [S3].
+Other Overseas: This category represents the smallest portion of revenue. In 2021, 2020, and 2019, it accounted for 1.3%, 3.1%, and 3.6% of the total revenue, respectively [S3].
+These geographic segments provide a clear picture of the company's revenue distribution over the specified period.
 
 
 ## Conclusion <a name="conclusion"></a>
