@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Generating a Business Model Canvas from Annual Reports - An experiment
+title: Business Model Canvas from Annual Reports - An experiment
 ---
 
 **Warning - this is a technical experiment and should not be considered financial advice or commentary of any kind**
