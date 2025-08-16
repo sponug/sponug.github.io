@@ -7,18 +7,18 @@ Warning - this is a technical experiment and should not be considered financial 
 
 # Table of contents
 1. [Introduction](#introduction)
-2. [Some paragraph](#paragraph1)
+2. [PDF's Into Searchable DB](#tech1)
 3. [Another paragraph](#paragraph2)
 
 ## This is the introduction <a name="introduction"></a>
-The primary goals were:
-1. ***Process last 10 years of annual reports***
-2. **Build something working with a minimal tech stack**:
-3. **Generate insights into the business using business model canvas** 
-4. **Work within a strict time frame** – complete the entire process, including this write-up, in **4–5 hours**.
-5. **Focus on learning over perfection** – prioritize understanding the workflow of creating and testing an agent over building a production-ready tool.
+The primary **goals** were:
+1. Process last 10 years of annual reports
+2. Build something working with a minimal tech stack
+3. Generate insights into the business using business model canvas
+4. Work within a strict time frame – complete the entire process, including this write-up, in **4–5 hours**.
+5. Focus on learning over perfection – prioritize understanding the workflow of creating and testing an agent over building a production-ready tool.
 
-## PDF Into Searchable DB <a name="tech1"></a>
+## PDF's Into Searchable DB <a name="tech1"></a>
 
 This script’s job is to **read all your PDF reports, chop them into small chunks of text, generate AI embeddings, and save them into a Chroma database** so you can later query them with an LLM.
 
