@@ -37,7 +37,8 @@ This script **turns your PDFs into a searchable database** by chopping them into
 I did this experiment on publicly available annual reports from 2015-2024
 
 ## Are there any surprises <a name="tech2"></a>
-Lets now check what some common themes across the 10 years of annual reports are . Ok - no surprises here -
+After clustering 10 years of reports, here are the most common recurring themes -
+
 1. Customer-Centric Service Approach (4522 chunks)
 2. Westpac Group Annual Report Summary (3994 chunks)
 3. Critical Accounting Estimates and Fair Value (3796 chunks)
@@ -47,7 +48,9 @@ Lets now check what some common themes across the 10 years of annual reports are
 7. Financial Performance Overview (2519 chunks)
 8. Economic Outlook and Growth Trends (1935 chunks)
 9. Capital Raising and Director Interests (1930 chunks)      
-10. CEO Transition and Leadership Strategy (1607 chunks) 
+10. CEO Transition and Leadership Strategy (1607 chunks)
+    
+Most of these are expected for a major bank: customer service, financial performance, and regulatory matters dominate. The most interesting theme for me was CEO Transition and Leadership Strategy, which shows up strongly even though leadership changes are relatively rare.
 
 [Source code for topics.py](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/topics.py)
 
