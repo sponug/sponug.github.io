@@ -21,6 +21,7 @@ This is a personal technical experiment that I conducted independently and is no
    7. [Key Activities - revisit](#activities)
    8. [Key Partnerships - revisit](#part)
    9. [Cost Structure - revisit](#cost)
+6. [Conclusion](#conclusion)
 
 ## Introduction <a name="introduction"></a>
 Annual reports are rich in information but notoriously hard to mine for structured insights. I wanted to see if modern AI tooling could automatically map 10 years of annual reports into the well-known Business Model Canvas (BMC) framework.
@@ -101,3 +102,8 @@ These metrics suggest a trend towards digital engagement with customers, as the 
 ### Channels <a name="Channels"></a>
 >**How does the company deliver products or services to customers?**
 > The company delivers products or services to customers through a combination of physical branches and digital platforms. Over the last ten fiscal years, there has been a noticeable trend towards digital engagement, as evidenced by the increase in digitally active customers from 4.7 million in 2014 to 5.6 million in 2018 [S1 2018.pdf p.134]. Despite this digital shift, the company still maintains a significant number of physical branches, although the number has decreased from 1,534 in 2014 to 1,204 in 2018 [S1 2018.pdf p.134]. This indicates a dual approach to delivering services, balancing between traditional branch-based services and digital platforms to cater to a broad customer base.
+
+## Conclusion <a name="conclusion"></a>
+**Conclusion**
+This experiment demonstrates how AI and structured frameworks like the Business Model Canvas can transform raw annual reports into actionable insights. By combining PDF ingestion, embeddings, and LLM-powered analysis, I was able to extract recurring themes, map strategic priorities, and answer targeted business questions across a decade of reports.
+
