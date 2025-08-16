@@ -28,7 +28,7 @@ This script’s job is to **read all your PDF reports, chop them into small chun
 
 Ingestion (one-time)
 --------------------
-[ingest](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/ingestion.png)
+![ingest](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/ingestion.png)
    
 This script **turns your PDFs into a searchable database** by chopping them into small pieces, converting them into AI-friendly vectors, and storing them in Chroma. Later, you can use this database to **ask questions across all your PDFs** instead of reading them manually.
 
@@ -57,7 +57,7 @@ This script takes all the AI-embedded chunks from your reports, groups them into
 This script builds a Q&A app for your annual reports.You ask a business question (freeform or guided by BMC blocks).
 It searches the last 10 years of reports. GPT summarizes the findings into a clean, source-cited answer.
 
-[query](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/query.png)
+![query](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/query.png)
 
 [Source code for app.py](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/app.py)
 
