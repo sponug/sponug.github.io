@@ -15,7 +15,7 @@ This is a personal technical experiment that I conducted independently and is no
    1. [Customer Segments](#customer)
    2. [Value Propositions](#valprops)
    3. [Channels](#Channels)
-   4. [Customer Relationships - revisit](#custrel)
+   4. [Customer Relationships](#custrel)
    5. [Revenue Streams - revisit](#rev)
    6. [Key Resources - revisit](#res)
    7. [Key Activities - revisit](#activities)
@@ -106,6 +106,19 @@ These metrics suggest a trend towards digital engagement with customers, as the 
 ### Channels <a name="Channels"></a>
 >**How does the company deliver products or services to customers?**
 > The company delivers products or services to customers through a combination of physical branches and digital platforms. Over the last ten fiscal years, there has been a noticeable trend towards digital engagement, as evidenced by the increase in digitally active customers from 4.7 million in 2014 to 5.6 million in 2018 [S1 2018.pdf p.134]. Despite this digital shift, the company still maintains a significant number of physical branches, although the number has decreased from 1,534 in 2014 to 1,204 in 2018 [S1 2018.pdf p.134]. This indicates a dual approach to delivering services, balancing between traditional branch-based services and digital platforms to cater to a broad customer base.
+
+### Customer Relations <a name="custrel"></a>
+>**How does the company maintain customer engagement?**
+>The company maintains customer engagement through several strategies:
+Digital Engagement: There has been a consistent increase in digitally active customers over the years, indicating a focus on enhancing digital platforms to engage customers. From 2014 to 2018, the number of digitally active customers rose from 4.7 million to 5.6 million [S1, S2]. This trend continued with 5.9 million digitally active customers in 2020 [S5].
+Service Excellence: The introduction of "Our Service Promise" highlights the company's commitment to providing exceptional service. This initiative sets clear expectations for delivering great service consistently, which is crucial for maintaining customer engagement [S4].
+Branch and ATM Network: Although there has been a reduction in the number of branches, the company has increased the percentage of branches with 24/7 capability, from 27% in 2016 to 36% in 2020 [S5]. This suggests an effort to enhance customer convenience and engagement through improved accessibility.
+Financial Education: The company also engages customers through financial education initiatives, delivered both face-to-face and online, which likely contributes to customer engagement by providing valuable resources and information [S6].
+These strategies collectively demonstrate the company's efforts to maintain and enhance customer engagement over the last decade
+
+>How does management describe building trust or brand loyalty?
+>Management describes building trust or brand loyalty by addressing stakeholder perceptions and expectations. They focus on reducing complexity and resolving issues that could impact customers and reputation, thereby strengthening processes to align with stakeholder beliefs and expectations [S1]. Additionally, they recognize that reputation risk can arise from gaps between stakeholder perceptions and the company's activities, which can affect the brand positively or negatively. Stakeholder perceptions include views on financial performance, quality of products or services, and management quality [S2].
+
 
 ## Conclusion <a name="conclusion"></a>
 **Conclusion**
