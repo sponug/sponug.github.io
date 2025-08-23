@@ -1,0 +1,40 @@
+prompts:
+  - |
+    Summarize this text: "{{text}}"
+  - |
+    Please write a concise summary of: "{{text}}"
+
+providers:
+  - openai:gpt-3.5-turbo
+  - openai:gpt-4
+
+tests:
+  - name: summary_test
+    vars:
+      text: "Linux is an open-source operating system kernel that forms the foundation for many operating systems, often called “Linux distributions” (like Ubuntu, Fedora, or Debian)"
+    assertions:
+      - contains-all:
+          values:
+            - "open-source"
+            - "operating system"
+      - llm-rubric:
+          instruction: |
+            Score the summary from 1 to 5 for:
+            - relevance: captures the main info?
+            - clarity: wording is clear and concise?
+          schema:
+            type: object
+            properties:
+              relevance:
+                type: number
+                minimum: 1
+                maximum: 5
+              clarity:
+                type: number
+                minimum: 1
+                maximum: 5
+            required: [relevance, clarity]
+            additionalProperties: false
+
+commandLineOptions:
+  cache: true
