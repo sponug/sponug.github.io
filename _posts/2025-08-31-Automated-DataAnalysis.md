@@ -67,3 +67,5 @@ Workflow Overview:
 In short: the script transforms raw CSV data into actionable insights automatically, making exploratory data analysis faster, safer, and more consistent
 
 [Soure Code](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/pandasai_filewatcher.py)
+
+[Sample Results](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/Titanic_dataset_qa.json)
