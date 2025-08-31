@@ -24,13 +24,13 @@ This project leverages PandasAI and OpenAI’s language models to automate the E
 - This is designed to be continuous, extensible, and robust, providing a foundation for AI-assisted data analytics workflows.
 
 ## Scope <a name="scope"></a>
-In Scope:
+***In Scope***:
   - Reading CSV files dropped into a designated folder.
   - Using PandasAI and OpenAI LLM to generate questions and answers.
   - Summarizing distributions of categorical variables as text.
   - Generating charts for numeric variables (optional enhancement).
   - Saving results in JSON format.
-Out of Scope:
+***Out of Scope***:
   - Modifying original datasets.
   - Handling real-time streaming outside the watched folder.
   - Deploying as a full web application (optional future enhancement).
@@ -55,12 +55,12 @@ Out of Scope:
   This Python script provides an automated, AI-powered data analysis pipeline for CSV files. It leverages PandasAI with OpenAI’s LLM to generate analytical insights, combined with Watchdog to detect new files in real-time.
 
 Workflow Overview:
-- Real-Time CSV Monitoring: Continuously watches a folder (data_folder) for new CSV files and triggers processing automatically.
-- Data Loading: Reads the CSV into a Pandas DataFrame and handles any file errors gracefully.
-- Question Generation: Uses PandasAI to generate 5–10 insightful analytical questions about the dataset without executing any analysis.
-- Answer Generation: Answers each question safely, providing textual summaries, tables, or plots (saved as PNGs) while avoiding direct code execution on sensitive categorical columns.
-- Result Output: Prints all question-answer pairs to the console and saves them as JSON files in qa_results.
-- Continuous Operation: The script keeps running, allowing ongoing monitoring and analysis of newly added CSV files.
+- **Real-Time data Monitoring**: Continuously watches a folder (data_folder) for new CSV files and triggers processing automatically.
+- **Data Loading**: Reads the CSV into a Pandas DataFrame and handles any file errors gracefully.
+- **Question Generation**: Uses PandasAI to generate 5–10 insightful analytical questions about the dataset without executing any analysis.
+- **Answer Generation**: Answers each question safely, providing textual summaries, tables, or plots (saved as PNGs) while avoiding direct code execution on sensitive categorical columns.
+- **Result Output**: Prints all question-answer pairs to the console and saves them as JSON files in qa_results.
+- **Continuous Operation**: The script keeps running, allowing ongoing monitoring and analysis of newly added CSV files.
 In short: the script transforms raw CSV data into actionable insights automatically, making exploratory data analysis faster, safer, and more consistent
 
 [Soure Code](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/pandasai_filewatcher.py)
