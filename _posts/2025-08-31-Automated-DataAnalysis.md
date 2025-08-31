@@ -10,7 +10,8 @@ Automating Exploratory Data analysis using PandasAI and chatGPT.
 2. [Solution Scope](#scope)
 3. [Tech Stack](#techstack)
 4. [Work flow](#workflow)
-5. [Code] (#code)
+5. [Source Code](#code)
+
 
 ## Introduction <a name="introduction"></a>
 In modern data analytics, one of the most time-consuming tasks is exploratory data analysis (EDA) — understanding the structure, patterns, and insights hidden in datasets. Analysts often spend significant effort generating meaningful questions and summarizing data.
@@ -50,5 +51,14 @@ Out of Scope:
   - Results storage: All results are saved as JSON and optionally charts in PNG format.
   - Reporting: Users can view results in the console or process saved files.
 
-## Code <a name="code"></a>
-    
+## Source Code <a name="code"></a>
+  This Python script provides an automated, AI-powered data analysis pipeline for CSV files. It leverages PandasAI with OpenAI’s LLM to generate analytical insights, combined with Watchdog to detect new files in real-time.
+
+Workflow Overview:
+Real-Time CSV Monitoring: Continuously watches a folder (data_folder) for new CSV files and triggers processing automatically.
+Data Loading: Reads the CSV into a Pandas DataFrame and handles any file errors gracefully.
+Question Generation: Uses PandasAI to generate 5–10 insightful analytical questions about the dataset without executing any analysis.
+Answer Generation: Answers each question safely, providing textual summaries, tables, or plots (saved as PNGs) while avoiding direct code execution on sensitive categorical columns.
+Result Output: Prints all question-answer pairs to the console and saves them as JSON files in qa_results.
+Continuous Operation: The script keeps running, allowing ongoing monitoring and analysis of newly added CSV files.
+In short: the script transforms raw CSV data into actionable insights automatically, making exploratory data analysis faster, safer, and more consistent
