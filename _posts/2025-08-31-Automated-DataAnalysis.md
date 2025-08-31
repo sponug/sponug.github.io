@@ -30,6 +30,7 @@ This project leverages PandasAI and OpenAI’s language models to automate the E
   - Summarizing distributions of categorical variables as text.
   - Generating charts for numeric variables (optional enhancement).
   - Saving results in JSON format.
+    
 ***Out of Scope***:
   - Modifying original datasets.
   - Handling real-time streaming outside the watched folder.
