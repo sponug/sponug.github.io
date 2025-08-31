@@ -5,6 +5,8 @@ title: Automated Data Analysis
 
 Automating Exploratory Data analysis using PandasAI and chatGPT.
 
+![latency](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/automated_eda.png)
+
 # Table of contents
 1. [Introduction](#introduction)
 2. [Solution Scope](#scope)
