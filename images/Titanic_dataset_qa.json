@@ -1,0 +1,42 @@
+[
+  {
+    "question": "1. What is the distribution of passengers by Pclass?",
+    "answer": "Unfortunately, I was not able to answer your question, because of the following error:\n\n'columns'\n"
+  },
+  {
+    "question": "2. How many passengers survived vs. not survived?",
+    "answer": "Number of passengers survived: 342, Number of passengers not survived: 549"
+  },
+  {
+    "question": "3. What is the average age of passengers?",
+    "answer": "The average age of passengers is 29.69911764705882"
+  },
+  {
+    "question": "4. How many male vs. female passengers are there?",
+    "answer": "Number of male passengers: 577, Number of female passengers: 314"
+  },
+  {
+    "question": "5. What is the most common age group among passengers?",
+    "answer": "The most common age group among passengers is Adult."
+  },
+  {
+    "question": "6. Is there a correlation between fare and survival rate?",
+    "answer": "The correlation between fare and survival rate is: 0.2573065223849622"
+  },
+  {
+    "question": "7. How many passengers embarked from each port?",
+    "answer": "Unfortunately, I was not able to answer your question, because of the following error:\n\n'columns'\n"
+  },
+  {
+    "question": "8. What is the distribution of passengers by cabin type?",
+    "answer": "Unfortunately, I was not able to answer your question, because of the following error:\n\n'columns'\n"
+  },
+  {
+    "question": "9. Are there any relationships between the number of siblings/spouses and survival rate?",
+    "answer": "Unfortunately, I was not able to answer your question, because of the following error:\n\n'columns'\n"
+  },
+  {
+    "question": "10. How does the ticket fare vary across different passenger classes?",
+    "answer": "   Pclass       Fare\n0       1  84.154687\n1       2  20.662183\n2       3  13.675550"
+  }
+]
