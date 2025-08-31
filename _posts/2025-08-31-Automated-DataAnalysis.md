@@ -62,3 +62,5 @@ Answer Generation: Answers each question safely, providing textual summaries, ta
 Result Output: Prints all question-answer pairs to the console and saves them as JSON files in qa_results.
 Continuous Operation: The script keeps running, allowing ongoing monitoring and analysis of newly added CSV files.
 In short: the script transforms raw CSV data into actionable insights automatically, making exploratory data analysis faster, safer, and more consistent
+
+[Soure Code](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/pandasai_filewatcher.py)
