@@ -55,12 +55,12 @@ Out of Scope:
   This Python script provides an automated, AI-powered data analysis pipeline for CSV files. It leverages PandasAI with OpenAI’s LLM to generate analytical insights, combined with Watchdog to detect new files in real-time.
 
 Workflow Overview:
-Real-Time CSV Monitoring: Continuously watches a folder (data_folder) for new CSV files and triggers processing automatically.
-Data Loading: Reads the CSV into a Pandas DataFrame and handles any file errors gracefully.
-Question Generation: Uses PandasAI to generate 5–10 insightful analytical questions about the dataset without executing any analysis.
-Answer Generation: Answers each question safely, providing textual summaries, tables, or plots (saved as PNGs) while avoiding direct code execution on sensitive categorical columns.
-Result Output: Prints all question-answer pairs to the console and saves them as JSON files in qa_results.
-Continuous Operation: The script keeps running, allowing ongoing monitoring and analysis of newly added CSV files.
+- Real-Time CSV Monitoring: Continuously watches a folder (data_folder) for new CSV files and triggers processing automatically.
+- Data Loading: Reads the CSV into a Pandas DataFrame and handles any file errors gracefully.
+- Question Generation: Uses PandasAI to generate 5–10 insightful analytical questions about the dataset without executing any analysis.
+- Answer Generation: Answers each question safely, providing textual summaries, tables, or plots (saved as PNGs) while avoiding direct code execution on sensitive categorical columns.
+- Result Output: Prints all question-answer pairs to the console and saves them as JSON files in qa_results.
+- Continuous Operation: The script keeps running, allowing ongoing monitoring and analysis of newly added CSV files.
 In short: the script transforms raw CSV data into actionable insights automatically, making exploratory data analysis faster, safer, and more consistent
 
 [Soure Code](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/pandasai_filewatcher.py)
