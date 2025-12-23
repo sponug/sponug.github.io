@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Neo4j for Beginners (Part 1): Thinking in Graphs with Banking Products
+title: Neo4j for Beginners (Part 1)- Thinking in Graphs with Banking Products
 ---
 
 This tutorial is for anyone curious about graph databases, even if you have never worked with a database before.
