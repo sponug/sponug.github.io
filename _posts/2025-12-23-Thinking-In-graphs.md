@@ -112,6 +112,37 @@ Let’s read it slowly:
 - RETURN c, p means: show the customers and products found
     
 Even if you’ve never used a query language before, you can still guess what this does and that’s intentional.
-    
 
+```
+MATCH (c:Customer)-[:USES]->(p:Product)
+RETURN c.name, p.name
+LIMIT 5
+```
+
+Results:
+
+| c.name  | p.name              |
+|---------|---------------------|
+| Alice   | Savings Account     |
+| Alice   | Credit Card         |
+| Bob     | Checking Account    |
+| Bob     | Credit Card         |
+| Carol   | Savings Account     |
+
+Result : 
+- This shows each customer-product pair as a row
+- Each row represents one relationship we found
+- LIMIT 5 keeps results manageable (best practice for exploring)
+
+If you want to filter for one specific customer :
+
+```
+// Find what Alice specifically uses
+MATCH (c:Customer {name: 'Alice'})-[:USES]->(p:Product)
+RETURN p.name
+```
+
+If these queries feel straightforward, that's by design. Cypher is meant to be readable. 
+The patterns you write mirror how you'd draw a graph on a whiteboard.You've now seen how to ask questions of a graph and interpret the answers. That's the 
+foundation—everything else builds from here
 
