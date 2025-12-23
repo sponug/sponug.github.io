@@ -11,6 +11,7 @@ By the end of this article, you’ll understand what a graph database is, why it
 1. [Introduction](#introduction)
 2. [What Is a Graph Database?](#paragraph1)
 3. [Why Relationships Are First-Class in Neo4j](#paragraph2)
+4. [Exploring Relationships with Cypher (Your First Query)](#paragraph3)
 
 ## Introduction <a name="introduction"></a>
 Banking systems store a lot of data — customers, accounts, cards, loans, and transactions.But what actually creates value is not the data itself, it’s how these things are connected.
@@ -80,3 +81,33 @@ If customers are connected to products, and products are connected to other cust
 
 At this stage, you don’t need algorithms or machine learning. The structure of the graph itself already captures valuable insights.
 
+## Exploring Relationships with Cypher (Your First Query) <a name="paragraph3"></a>
+
+So far, we’ve talked about graphs conceptually.Now let’s see how we can ask questions of a graph.
+Neo4j is queried using a language called **Cypher**.Cypher is designed to be readable and closely match how we draw and think about graphs.
+Instead of telling the database how to find data step by step, Cypher lets you describe the pattern you are looking for.
+
+**Reading a graph pattern**
+Let’s start with a simple question:
+    “Which products does a customer use?”
+This pattern reads almost like a sentence:
+````
+a Customer
+USES
+a Product
+````
+**your first Cypher query**
+Here is what that looks like as a Cypher query:
+````
+MATCH (c:Customer)-[:USES]->(p:Product)
+RETURN c, p
+````
+Let’s read it slowly.
+    - MATCH means: find this pattern
+    - (c:Customer) means: a node labeled Customer
+    - [:USES]-> means: a relationship called USES
+    - (p:Product) means: a node labeled Product
+    - RETURN c, p means: show the customers and products found
+    
+Even if you’ve never used a query language before, you can still guess what this does and that’s intentional.
+    
