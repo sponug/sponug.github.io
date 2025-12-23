@@ -98,16 +98,20 @@ a Product
 ````
 **your first Cypher query**
 Here is what that looks like as a Cypher query:
+
 ````
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c, p
 ````
-Let’s read it slowly.
-    - MATCH means: find this pattern
-    - (c:Customer) means: a node labeled Customer
-    - [:USES]-> means: a relationship called USES
-    - (p:Product) means: a node labeled Product
-    - RETURN c, p means: show the customers and products found
+
+Let’s read it slowly:
+- MATCH means: find this pattern
+- (c:Customer) means: a node labeled Customer
+- [:USES]-> means: a relationship called USES
+- (p:Product) means: a node labeled Product
+- RETURN c, p means: show the customers and products found
     
 Even if you’ve never used a query language before, you can still guess what this does and that’s intentional.
     
+
+
