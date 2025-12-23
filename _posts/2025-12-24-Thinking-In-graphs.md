@@ -33,13 +33,7 @@ a Customer USES a Product
 a Customer OWNS an Account
 an Account IS_LINKED_TO a Product
 
-These connections are not implied or calculated later — they are stored directly in the database
-
-(:Customer) ──USES──▶ (:Product)
-     │
-     └──OWNS──▶ (:Account) ──IS_LINKED_TO──▶ (:Product)
-     
-This structure mirrors how banking relationships exist in the real world, making it easy to explore how customers, accounts, and products relate to each other.
+These connections are not implied or calculated later — they are stored directly in the database. This structure mirrors how banking relationships exist in the real world, making it easy to explore how customers, accounts, and products relate to each other.
 
 
 ### Sub paragraph <a name="subparagraph1"></a>
