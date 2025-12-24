@@ -12,7 +12,7 @@ By the end of this article, you’ll understand what a graph database is, why it
 2. [What Is a Graph Database?](#paragraph1)
 3. [Why Relationships Are First-Class in Neo4j](#paragraph2)
 4. [Exploring Relationships with Cypher (Your First Query)](#paragraph3)
-5. [Final thouhgt](#paragraph4)
+5. [Final thought](#paragraph4)
 
 ## Introduction <a name="introduction"></a>
 Banking systems store a lot of data — customers, accounts, cards, loans, and transactions.But what actually creates value is not the data itself, it’s how these things are connected.
