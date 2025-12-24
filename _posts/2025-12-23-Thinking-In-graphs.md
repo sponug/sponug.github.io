@@ -12,6 +12,7 @@ By the end of this article, you’ll understand what a graph database is, why it
 2. [What Is a Graph Database?](#paragraph1)
 3. [Why Relationships Are First-Class in Neo4j](#paragraph2)
 4. [Exploring Relationships with Cypher (Your First Query)](#paragraph3)
+5. [Final thouhgt](#paragraph4)
 
 ## Introduction <a name="introduction"></a>
 Banking systems store a lot of data — customers, accounts, cards, loans, and transactions.But what actually creates value is not the data itself, it’s how these things are connected.
@@ -146,3 +147,10 @@ If these queries feel straightforward, that's by design. Cypher is meant to be r
 The patterns you write mirror how you'd draw a graph on a whiteboard.You've now seen how to ask questions of a graph and interpret the answers. That's the 
 foundation—everything else builds from here
 
+## Final thought <a name="paragraph4"></a>
+
+Graph databases aren't just a different way to store data—they're a different way to think about data. The relationships you model and the questions you ask become more natural, more intuitive. That shift in thinking is what we're building toward, one query at a time.
+
+Hopefully this has whetted your appetite for the next articles in this series. In Part 2, things get interesting—we'll start creating our own graph data and writing queries that follow multiple relationships to discover patterns you couldn't easily see any other way. 
+
+See you there.
