@@ -82,9 +82,10 @@ This shows:
 - Target node: savings (a Product)
 - Relationships always have a direction, but you can traverse them in either direction or ignore direction entirely when querying. **The direction is part of the data model and can carry semantic meaning—"Alice USES Product" is different from "Product USED_BY Alice," even though they describe the same connection from different perspectives.**
 - Important: A node can have a relationship to itself. For example, if Tom Hanks knows himself:
-```Cypher
+
+````Cypher
 (tom:Person)-[:KNOWS]->(tom)
-```
+````
 
 ### Relationship Types: Classifying Connections
 Just as labels classify nodes, relationship types classify relationships. Every relationship must have exactly one type.
