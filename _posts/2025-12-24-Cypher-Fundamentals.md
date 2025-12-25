@@ -239,6 +239,12 @@ CREATE (david)-[:USES {since: date('2023-09-12'), status: 'active'}]->(loan)
 ```
 After running all these queries, we've built a small but complete banking graph. We have customers, products, and the relationships between them—including metadata about when each relationship started and whether it's currently active.
 
+![customers](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/1.customers.PNG)
+![products](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/2.products_1.PNG)
+![visualisation](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/3.visualisation.png)
+
+
+
 
 
 
