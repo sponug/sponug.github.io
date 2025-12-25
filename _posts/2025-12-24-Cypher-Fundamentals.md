@@ -21,9 +21,9 @@ Before we start creating data and writing queries, let's establish a solid found
 Neo4j uses a property graph database model. At its core, a graph data structure consists of nodes (discrete objects) that can be connected by relationships. Think of it like a network or mind map where circles represent things and arrows represent connections between those things.
 Here's the simplest possible visualization:
 
-````
+```
 (Node A) --[RELATIONSHIP]--> (Node B)
-````
+```
 
 The Neo4j property graph model consists of **five fundamental** building blocks:
 - **Nodes** - Represent entities or discrete objects in your domain
@@ -201,21 +201,20 @@ Add several more relationships to build out our dataset:
 MATCH (alice:Customer {id: 'C001'})
 MATCH (credit:Product {code: 'CRD-001'})
 CREATE (alice)-[:USES {since: date('2020-06-10'), status: 'active'}]->(credit)
---
 
 MATCH (bob:Customer {id: 'C002'})
 MATCH (checking:Product {code: 'CHK-001'})
 CREATE (bob)-[:USES {since: date('2021-03-20'), status: 'active'}]->(checking)
---
+
 
 MATCH (bob:Customer {id: 'C002'})
 MATCH (credit:Product {code: 'CRD-001'})
 CREATE (bob)-[:USES {since: date('2021-08-15'), status: 'active'}]->(credit)
---
+
 MATCH (bob:Customer {id: 'C002'})
 MATCH (loan:Product {code: 'LON-001'})
 CREATE (bob)-[:USES {since: date('2023-01-10'), status: 'active'}]->(loan)
---
+
 MATCH (carol:Customer {id: 'C003'})
 MATCH (savings:Product {code: 'SAV-001'})
 CREATE (carol)-[:USES {since: date('2019-07-10'), status: 'active'}]->(savings)
@@ -223,20 +222,20 @@ CREATE (carol)-[:USES {since: date('2019-07-10'), status: 'active'}]->(savings)
 MATCH (carol:Customer {id: 'C003'})
 MATCH (checking:Product {code: 'CHK-001'})
 CREATE (carol)-[:USES {since: date('2019-07-10'), status: 'active'}]->(checking)
---
+
 MATCH (carol:Customer {id: 'C003'})
 MATCH (mortgage:Product {code: 'MTG-001'})
 CREATE (carol)-[:USES {since: date('2020-11-20'), status: 'active'}]->(mortgage)
---
+
 MATCH (david:Customer {id: 'C004'})
 MATCH (credit:Product {code: 'CRD-001'})
 CREATE (david)-[:USES {since: date('2022-06-05'), status: 'active'}]->(credit)
---
+
 MATCH (david:Customer {id: 'C004'})
 MATCH (loan:Product {code: 'LON-001'})
 CREATE (david)-[:USES {since: date('2023-09-12'), status: 'active'}]->(loan)
-
 ```
+
 After running all these queries, we've built a small but complete banking graph. We have customers, products, and the relationships between them—including metadata about when each relationship started and whether it's currently active.
 
 ![customers](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/1.customers.PNG)
@@ -303,24 +302,24 @@ RETURN c.name, p.name, u.since
 This finds only active relationships that started after 2022. Notice we gave the relationship a variable (u) so we can reference its properties.
 
 ### Comparison operators work as you'd expect:
-````
+```
 MATCH (c:Customer)-[u:USES]->(p:Product)
 WHERE u.since < date('2021-01-01')
 RETURN c.name, p.name, u.since
 ORDER BY u.since
-````
+```
 
 The <> operator means "not equal":
-````
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 WHERE p.category <> 'Deposit'
 RETURN c.name, p.name
-````
+```
 
 ### ORDER BY and LIMIT: Controlling Output
 ORDER BY sorts your results, and LIMIT restricts how many rows you get back. These are essential when exploring data or building user-facing features.
 Sort customers alphabetically:
-````
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, p.name
 ORDER BY c.name
@@ -341,7 +340,7 @@ LIMIT restricts results to the first N rows:
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, p.name
 LIMIT 5
-````
+```
 
 
 ### Always use LIMIT when exploring your graph, especially as it grows. 
@@ -349,80 +348,80 @@ LIMIT 5
 Without it, you might accidentally return millions of rows.
 Combine them for "top N" queries:
 
-````
+```
 MATCH (c:Customer)
 RETURN c.name, c.since
 ORDER BY c.since DESC
 LIMIT 3
 
 This shows your three most recent customers.
-````
+```
 
 ### COUNT and Aggregations
 
 Aggregations let you compute summary statistics. The most common is COUNT, which counts how many times something appears.
-````
+```
 How many products does each customer use?
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, COUNT(p) AS product_count
 ORDER BY product_count DESC
-````
+```
 
 ### The AS keyword 
 creates an alias for the result column. Now you can reference product_count in ORDER BY.
 Key insight: When you use an aggregation function like COUNT, Cypher automatically groups results by all non-aggregated columns in your RETURN clause. Here, results are grouped by c.name, and products are counted within each group.
 
-````
+```
 Other aggregation functions work similarly:
 MATCH (c:Customer)-[u:USES]->(p:Product)
 RETURN c.name, 
        COUNT(p) AS product_count,
        MIN(u.since) AS first_product,
        MAX(u.since) AS latest_product
-````
+```
 
 ### COLLECT
 
 COLLECT is particularly useful—it creates a list of values:
-````
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, COLLECT(p.name) AS products
-````
+```
 This returns each customer with an array of all their product names. Perfect for seeing someone's complete product portfolio at a glance.
 You can count without grouping by using COUNT(*):
-````
+```
 MATCH (c:Customer)-[:USES]->(p:Product {category: 'Credit'})
 RETURN COUNT(*) AS credit_product_users
-````
+```
 This counts the total number of customer-product relationships where the product is Credit, giving you a single number.
 
 ### DISTINCT: Removing Duplicates
 
 Sometimes patterns in your graph create duplicate results. DISTINCT removes them.
 Without DISTINCT, this query might return the same customer multiple times if they use multiple Credit products:
-````
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 WHERE p.category = 'Credit'
 RETURN DISTINCT c.name
-````
+```
 This returns each customer name only once, no matter how many Credit products they use.
 
 You can also use DISTINCT with COUNT:
-````
+```
 MATCH (p:Product)<-[:USES]-(c:Customer)
 RETURN p.name, COUNT(DISTINCT c) AS unique_customers
-````
+```
 This counts how many different customers use each product. Without DISTINCT, if a customer had multiple relationships to the same product (which shouldn't happen in our model, but could in more complex graphs), they'd be counted multiple times.
 
 ### WITH: Chaining Query Steps
 WITH is one of Cypher's most powerful clauses. It lets you chain multiple query steps together, passing results from one step to the next. Think of it as a pipeline.
 Find customers who use more than 2 products:
-````
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 WITH c, COUNT(p) AS product_count
 WHERE product_count > 2
 RETURN c.name, product_count
-````
+```
 Here's what happens:
 - First MATCH finds all customer-product relationships
 - WITH groups by customer and counts products, creating product_count
