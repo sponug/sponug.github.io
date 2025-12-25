@@ -431,14 +431,14 @@ Here's what happens:
 - Without WITH, you couldn't filter on COUNT(p) because aggregations happen after WHERE clauses in the same query block.
 - WITH is also useful for transforming data mid-query:
 
-````
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 WITH c, COLLECT(p.name) AS products
 WHERE SIZE(products) > 2
 RETURN c.name, products
 
 This collects all products into a list, then filters customers based on the size of that list.
-````
+```
 
 
 
