@@ -442,7 +442,7 @@ RETURN c.name, products
 ```
 
 If you want to use my version of the queries , single file containing all the code : 
-![visualisation](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/cypher_queries.txt)
+![code](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/cypher_queries.txt)
 
 
 ## Wrap Up <a name="wrap"></a>
