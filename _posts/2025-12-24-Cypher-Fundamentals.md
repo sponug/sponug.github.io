@@ -242,6 +242,16 @@ After running all these queries, we've built a small but complete banking graph.
 ![products](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/2.products_1.PNG)
 ![visualisation](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/3.visualisation.png)
 
+### Verify Your Graph
+Let's make sure everything is there:
+``` Cypher
+MATCH (c:Customer)-[u:USES]->(p:Product)
+RETURN c.name, p.name, u.since
+ORDER BY c.name, u.since
+```
+You should see all your customers, the products they use, and when they started using them. This is the graph you'll query throughout the rest of this article
+
+
 
 
 
