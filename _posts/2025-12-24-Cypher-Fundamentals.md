@@ -22,6 +22,7 @@ Neo4j uses a property graph database model. At its core, a graph data structure 
 Here's the simplest possible visualization:
 
 ```
+
 (Node A) --[RELATIONSHIP]--> (Node B)
 ```
 
