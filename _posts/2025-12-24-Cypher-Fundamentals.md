@@ -21,7 +21,7 @@ Before we start creating data and writing queries, let's establish a solid found
 Neo4j uses a property graph database model. At its core, a graph data structure consists of nodes (discrete objects) that can be connected by relationships. Think of it like a network or mind map where circles represent things and arrows represent connections between those things.
 Here's the simplest possible visualization:
 
-```
+```Cypher
 (Node A) --[RELATIONSHIP]--> (Node B)
 ```
 
@@ -42,7 +42,7 @@ Nodes are used to represent entities — the discrete objects in your domain. In
 - Nodes can exist independently (a node doesn't need relationships)
 - The simplest possible graph is a single node with no relationships:
 
-```
+```Cypher
 (Customer)
 ```
 **Nodes represent the "nouns" of your domain — the people, places, things, or concepts that matter to your application.**
