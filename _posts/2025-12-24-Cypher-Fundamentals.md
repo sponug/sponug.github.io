@@ -21,9 +21,9 @@ Before we start creating data and writing queries, let's establish a solid found
 Neo4j uses a property graph database model. At its core, a graph data structure consists of nodes (discrete objects) that can be connected by relationships. Think of it like a network or mind map where circles represent things and arrows represent connections between those things.
 Here's the simplest possible visualization:
 
-```Cypher
+````Cypher
 (Node A) --[RELATIONSHIP]--> (Node B)
-```
+````
 
 The Neo4j property graph model consists of ***five fundamental*** building blocks:
 - **Nodes** - Represent entities or discrete objects in your domain
@@ -42,9 +42,9 @@ Nodes are used to represent entities — the discrete objects in your domain. In
 - Nodes can exist independently (a node doesn't need relationships)
 - The simplest possible graph is a single node with no relationships:
 
-```Cypher
+````Cypher
 (Customer)
-```
+````
 ***Nodes represent the "nouns" of your domain — the people, places, things, or concepts that matter to your application.***
 
 ### Labels: Classifying Your Nodes
@@ -71,9 +71,9 @@ A relationship describes a connection between a source node and a target node. T
 - Can have properties (key-value pairs)
 - A node can have a relationship to itself
 Example relationship:
-```Cypher
+````Cypher
 (alice:Customer)-[:USES {since: date('2020-01-15'), status: 'active'}]->(savings:Product)
-```
+````
 This shows:
 - Source node: alice (a Customer)
 - Relationship type: USES
@@ -109,7 +109,7 @@ Key characteristics:
 - Properties are case-sensitive
 - Naming convention: Use camelCase for properties (firstName rather than first_name)
 - Supported data types:
-```Cypher
+````Cypher
 Numbers:
 CREATE (:Example {count: 42, price: 19.99})
 
@@ -125,15 +125,15 @@ CREATE (:Example {
   scores: [95, 87, 92],
   active: [true, false, true]
 })
-```
+````
 Important: Properties are only stored when they have values. There's no concept of null values being stored—if a property isn't set, it simply doesn't exist on that node or relationship.
 
 ## Setting Up Your Practice Environment <a name="environment"></a>
 Neo4j Sandbox runs entirely in your browser—no installation required. Visit [sandbox.neo4j.com](sandbox.neo4j.com), create a free account, and launch a blank sandbox. Within seconds, you'll have a working Neo4j instance with the Browser interface ready to go. This is perfect if you want to start immediately without worrying about setup. If you're using a sandbox that has sample data, or if you want to start fresh at any point, you can clear everything with:
 
-```Cypher
+````Cypher
 MATCH (n) DETACH DELETE n
-```
+````
 This finds all nodes (MATCH (n)), detaches them from their relationships, and deletes everything. This was very useful for the exercise below .
 
 ## Creating Your Banking Graph <a name="bankgraph"></a>
