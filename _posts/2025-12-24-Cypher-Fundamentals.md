@@ -42,9 +42,9 @@ Nodes are used to represent entities — the discrete objects in your domain. In
 - Nodes can exist independently (a node doesn't need relationships)
 - The simplest possible graph is a single node with no relationships:
 
-```cypher
+````cypher
 (Customer)
-```
+````
 **Nodes represent the "nouns" of your domain — the people, places, things, or concepts that matter to your application.**
 
 ### Labels: Classifying Your Nodes
