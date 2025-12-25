@@ -301,20 +301,26 @@ RETURN c.name, p.name, u.since
 ```
 
 This finds only active relationships that started after 2022. Notice we gave the relationship a variable (u) so we can reference its properties.
-Comparison operators work as you'd expect:
+
+### Comparison operators work as you'd expect:
+````
 MATCH (c:Customer)-[u:USES]->(p:Product)
 WHERE u.since < date('2021-01-01')
 RETURN c.name, p.name, u.since
 ORDER BY u.since
+````
 
 The <> operator means "not equal":
+````
 MATCH (c:Customer)-[:USES]->(p:Product)
 WHERE p.category <> 'Deposit'
 RETURN c.name, p.name
+````
 
-ORDER BY and LIMIT: Controlling Output
+### ORDER BY and LIMIT: Controlling Output
 ORDER BY sorts your results, and LIMIT restricts how many rows you get back. These are essential when exploring data or building user-facing features.
 Sort customers alphabetically:
+````
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, p.name
 ORDER BY c.name
@@ -335,35 +341,53 @@ LIMIT restricts results to the first N rows:
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, p.name
 LIMIT 5
+````
 
-Always use LIMIT when exploring your graph, especially as it grows. Without it, you might accidentally return millions of rows.
+
+### Always use LIMIT when exploring your graph, especially as it grows. 
+
+Without it, you might accidentally return millions of rows.
 Combine them for "top N" queries:
+
+````
 MATCH (c:Customer)
 RETURN c.name, c.since
 ORDER BY c.since DESC
 LIMIT 3
 
 This shows your three most recent customers.
-COUNT and Aggregations
+````
+
+### COUNT and Aggregations
+
 Aggregations let you compute summary statistics. The most common is COUNT, which counts how many times something appears.
+````
 How many products does each customer use?
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, COUNT(p) AS product_count
 ORDER BY product_count DESC
+````
 
-The AS keyword creates an alias for the result column. Now you can reference product_count in ORDER BY.
+### The AS keyword 
+creates an alias for the result column. Now you can reference product_count in ORDER BY.
 Key insight: When you use an aggregation function like COUNT, Cypher automatically groups results by all non-aggregated columns in your RETURN clause. Here, results are grouped by c.name, and products are counted within each group.
+
+````
 Other aggregation functions work similarly:
 MATCH (c:Customer)-[u:USES]->(p:Product)
 RETURN c.name, 
        COUNT(p) AS product_count,
        MIN(u.since) AS first_product,
        MAX(u.since) AS latest_product
+````
+
+### COLLECT
 
 COLLECT is particularly useful—it creates a list of values:
+````
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, COLLECT(p.name) AS products
-
+````
 This returns each customer with an array of all their product names. Perfect for seeing someone's complete product portfolio at a glance.
 You can count without grouping by using COUNT(*):
 MATCH (c:Customer)-[:USES]->(p:Product {category: 'Credit'})
