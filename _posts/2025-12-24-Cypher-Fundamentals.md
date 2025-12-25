@@ -390,55 +390,55 @@ RETURN c.name, COLLECT(p.name) AS products
 ````
 This returns each customer with an array of all their product names. Perfect for seeing someone's complete product portfolio at a glance.
 You can count without grouping by using COUNT(*):
+````
 MATCH (c:Customer)-[:USES]->(p:Product {category: 'Credit'})
 RETURN COUNT(*) AS credit_product_users
-
+````
 This counts the total number of customer-product relationships where the product is Credit, giving you a single number.
-DISTINCT: Removing Duplicates
+
+### DISTINCT: Removing Duplicates
+
 Sometimes patterns in your graph create duplicate results. DISTINCT removes them.
 Without DISTINCT, this query might return the same customer multiple times if they use multiple Credit products:
+````
 MATCH (c:Customer)-[:USES]->(p:Product)
 WHERE p.category = 'Credit'
 RETURN DISTINCT c.name
-
+````
 This returns each customer name only once, no matter how many Credit products they use.
+
 You can also use DISTINCT with COUNT:
+````
 MATCH (p:Product)<-[:USES]-(c:Customer)
 RETURN p.name, COUNT(DISTINCT c) AS unique_customers
-
+````
 This counts how many different customers use each product. Without DISTINCT, if a customer had multiple relationships to the same product (which shouldn't happen in our model, but could in more complex graphs), they'd be counted multiple times.
-WITH: Chaining Query Steps
+
+### WITH: Chaining Query Steps
 WITH is one of Cypher's most powerful clauses. It lets you chain multiple query steps together, passing results from one step to the next. Think of it as a pipeline.
 Find customers who use more than 2 products:
+````
 MATCH (c:Customer)-[:USES]->(p:Product)
 WITH c, COUNT(p) AS product_count
 WHERE product_count > 2
 RETURN c.name, product_count
-
+````
 Here's what happens:
-First MATCH finds all customer-product relationships
-WITH groups by customer and counts products, creating product_count
-WHERE filters on that count (you can't filter on aggregations in the first MATCH)
-RETURN shows the results
-Without WITH, you couldn't filter on COUNT(p) because aggregations happen after WHERE clauses in the same query block.
-WITH is also useful for transforming data mid-query:
+- First MATCH finds all customer-product relationships
+- WITH groups by customer and counts products, creating product_count
+- WHERE filters on that count (you can't filter on aggregations in the first MATCH)
+- RETURN shows the results
+- Without WITH, you couldn't filter on COUNT(p) because aggregations happen after WHERE clauses in the same query block.
+- WITH is also useful for transforming data mid-query:
+
+````
 MATCH (c:Customer)-[:USES]->(p:Product)
 WITH c, COLLECT(p.name) AS products
 WHERE SIZE(products) > 2
 RETURN c.name, products
 
 This collects all products into a list, then filters customers based on the size of that list.
-You can chain multiple WITH clauses:
-MATCH (c:Customer)-[:USES]->(p:Product)
-WITH c, COUNT(p) AS product_count
-WHERE product_count > 1
-WITH c, product_count
-ORDER BY product_count DESC
-LIMIT 3
-RETURN c.name, product_count
-
-This finds customers with more than one product, sorts them by count, takes the top 3, and returns them. Each WITH passes results to the next step.
-Think of WITH as setting up the next phase of your query. It's essential for complex multi-step logic.
+````
 
 
 
