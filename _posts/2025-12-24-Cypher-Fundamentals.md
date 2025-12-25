@@ -3,7 +3,7 @@ layout: post
 title: Neo4j for Beginners (Part 2)- Cypher Fundamentals
 ---
 
-In Part 1, we learned what makes graph databases different: data is stored as nodes (things) and relationships (connections), and those connections are first-class citizens in the database. We also wrote your first Cypher query to find patterns in banking data.
+In [Part 1](https://sponug.github.io/Thinking-In-graphs/), we learned what makes graph databases different: data is stored as nodes (things) and relationships (connections), and those connections are first-class citizens in the database. We also wrote your first Cypher query to find patterns in banking data.
 Now it's time to go deeper. In this article, lets learn how to create your own graph data, master essential Cypher clauses, and write the queries that make graphs truly powerful.
 
 
@@ -126,6 +126,117 @@ CREATE (:Example {
 })
 ```
 Important: Properties are only stored when they have values. There's no concept of null values being stored—if a property isn't set, it simply doesn't exist on that node or relationship.
+
+## Setting Up Your Practice Environment <a name="environment"></a>
+Neo4j Sandbox runs entirely in your browser—no installation required. Visit [sandbox.neo4j.com](sandbox.neo4j.com), create a free account, and launch a blank sandbox. Within seconds, you'll have a working Neo4j instance with the Browser interface ready to go. This is perfect if you want to start immediately without worrying about setup. If you're using a sandbox that has sample data, or if you want to start fresh at any point, you can clear everything with:
+
+```Cypher
+MATCH (n) DETACH DELETE n
+```
+This finds all nodes (MATCH (n)), detaches them from their relationships, and deletes everything. This was very useful for the exercise below .
+
+## Creating Your Banking Graph <a name="bankgraph"></a>
+
+In [Part 1](https://sponug.github.io/Thinking-In-graphs/), you queried existing data. Now you'll learn how to create it yourself. Neo4j uses the CREATE clause to add nodes and relationships to your graph.
+
+### Creating Nodes
+
+Let's start by creating some customers. Each customer is a node with properties that describe them:
+```Cypher
+CREATE (alice:Customer {id: 'C001', name: 'Alice', since: date('2020-01-15')})
+```
+
+Let's break down what's happening here:
+- CREATE tells Neo4j we're adding something new
+- (alice:Customer ...) creates a node. The word before the colon (alice) is a variable we can use in this query, and the word after (:Customer) is a label that categorizes this node
+- {id: 'C001', name: 'Alice', since: date('2020-01-15')} are properties—key-value pairs that store information about this customer
+- The date() function creates a proper date object rather than just text
+
+Run that query, then create a few more customers:
+
+```Cypher
+CREATE (bob:Customer {id: 'C002', name: 'Bob', since: date('2021-03-20')})
+CREATE (carol:Customer {id: 'C003', name: 'Carol', since: date('2019-07-10')})
+CREATE (david:Customer {id: 'C004', name: 'David', since: date('2022-06-05')})
+```
+
+Each CREATE statement adds one node to your graph. You should see a confirmation message after each one: "Added 1 node."
+
+### Creating Products
+Now let's add the banking products these customers might use:
+
+```Cypher
+CREATE (savings:Product {code: 'SAV-001', name: 'Savings Account', category: 'Deposit'})
+CREATE (checking:Product {code: 'CHK-001', name: 'Checking Account', category: 'Deposit'})
+CREATE (credit:Product {code: 'CRD-001', name: 'Credit Card', category: 'Credit'})
+CREATE (loan:Product {code: 'LON-001', name: 'Personal Loan', category: 'Credit'})
+CREATE (mortgage:Product {code: 'MTG-001', name: 'Mortgage', category: 'Credit'})
+```
+
+Notice we're using different properties here (code, name, category) because products need different information than customers. This flexibility is one of the strengths of graph databases—different node types can have completely different properties.
+
+### Creating Relationships
+Now comes the interesting part: connecting customers to products. This is where graphs really shine. We need to find the nodes we want to connect, then create a relationship between them:
+
+```Cypher
+MATCH (alice:Customer {id: 'C001'})
+MATCH (savings:Product {code: 'SAV-001'})
+CREATE (alice)-[:USES {since: date('2020-01-15'), status: 'active'}]->(savings)
+```
+
+Let's understand this step by step:
+- The first MATCH finds Alice (the customer we created earlier)
+- The second MATCH finds the Savings Account product
+- CREATE (alice)-[:USES ...]-> (savings) creates a relationship from Alice to the Savings Account
+- The relationship type is USES (inside the square brackets)
+- The direction matters: the arrow -> points from customer to product, meaning "Alice uses Savings Account"
+- Relationships can have properties too: we're storing when the relationship started and its current status
+
+Add several more relationships to build out our dataset:
+
+
+```Cypher
+MATCH (alice:Customer {id: 'C001'})
+MATCH (credit:Product {code: 'CRD-001'})
+CREATE (alice)-[:USES {since: date('2020-06-10'), status: 'active'}]->(credit)
+--
+
+MATCH (bob:Customer {id: 'C002'})
+MATCH (checking:Product {code: 'CHK-001'})
+CREATE (bob)-[:USES {since: date('2021-03-20'), status: 'active'}]->(checking)
+--
+
+MATCH (bob:Customer {id: 'C002'})
+MATCH (credit:Product {code: 'CRD-001'})
+CREATE (bob)-[:USES {since: date('2021-08-15'), status: 'active'}]->(credit)
+--
+MATCH (bob:Customer {id: 'C002'})
+MATCH (loan:Product {code: 'LON-001'})
+CREATE (bob)-[:USES {since: date('2023-01-10'), status: 'active'}]->(loan)
+--
+MATCH (carol:Customer {id: 'C003'})
+MATCH (savings:Product {code: 'SAV-001'})
+CREATE (carol)-[:USES {since: date('2019-07-10'), status: 'active'}]->(savings)
+--
+MATCH (carol:Customer {id: 'C003'})
+MATCH (checking:Product {code: 'CHK-001'})
+CREATE (carol)-[:USES {since: date('2019-07-10'), status: 'active'}]->(checking)
+--
+MATCH (carol:Customer {id: 'C003'})
+MATCH (mortgage:Product {code: 'MTG-001'})
+CREATE (carol)-[:USES {since: date('2020-11-20'), status: 'active'}]->(mortgage)
+--
+MATCH (david:Customer {id: 'C004'})
+MATCH (credit:Product {code: 'CRD-001'})
+CREATE (david)-[:USES {since: date('2022-06-05'), status: 'active'}]->(credit)
+--
+MATCH (david:Customer {id: 'C004'})
+MATCH (loan:Product {code: 'LON-001'})
+CREATE (david)-[:USES {since: date('2023-09-12'), status: 'active'}]->(loan)
+--
+```
+After running all these queries, we've built a small but complete banking graph. We have customers, products, and the relationships between them—including metadata about when each relationship started and whether it's currently active.
+
 
 
 
