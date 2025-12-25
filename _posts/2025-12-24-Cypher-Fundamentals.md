@@ -42,9 +42,9 @@ Nodes are used to represent entities — the discrete objects in your domain. In
 - Nodes can exist independently (a node doesn't need relationships)
 - The simplest possible graph is a single node with no relationships:
 
-````Cypher
+```Cypher
 (Customer)
-````
+```
 ***Nodes represent the "nouns" of your domain — the people, places, things, or concepts that matter to your application.***
 
 ### Labels: Classifying Your Nodes
@@ -71,9 +71,9 @@ A relationship describes a connection between a source node and a target node. T
 - Can have properties (key-value pairs)
 - A node can have a relationship to itself
 Example relationship:
-````Cypher
+```Cypher
 (alice:Customer)-[:USES {since: date('2020-01-15'), status: 'active'}]->(savings:Product)
-````
+```
 This shows:
 - Source node: alice (a Customer)
 - Relationship type: USES
@@ -83,9 +83,9 @@ This shows:
 - Relationships always have a direction, but you can traverse them in either direction or ignore direction entirely when querying. **The direction is part of the data model and can carry semantic meaning—"Alice USES Product" is different from "Product USED_BY Alice," even though they describe the same connection from different perspectives.**
 - Important: A node can have a relationship to itself. For example, if Tom Hanks knows himself:
 
-````Cypher
+```Cypher
 (tom:Person)-[:KNOWS]->(tom)
-````
+```
 
 ### Relationship Types: Classifying Connections
 Just as labels classify nodes, relationship types classify relationships. Every relationship must have exactly one type.
@@ -109,6 +109,7 @@ Key characteristics:
 - Properties are case-sensitive
 - Naming convention: Use camelCase for properties (firstName rather than first_name)
 - Supported data types:
+
 ```Cypher
 Numbers:
 CREATE (:Example {count: 42, price: 19.99})
