@@ -1,0 +1,69 @@
+you will need to delete and start over again multiple times -
+MATCH (n) DETACH DELETE n
+
+=================
+
+
+Creating nodes 
+===============
+CREATE (alice:Customer {id: 'C001', name: 'Alice', since: date('2020-01-15')})
+CREATE (bob:Customer {id: 'C002', name: 'Bob', since: date('2021-03-20')})
+CREATE (carol:Customer {id: 'C003', name: 'Carol', since: date('2019-07-10')})
+CREATE (david:Customer {id: 'C004', name: 'David', since: date('2022-06-05')})
+
+
+Creating Products 
+=================
+CREATE (savings:Product {code: 'SAV-001', name: 'Savings Account', category: 'Deposit'})
+CREATE (checking:Product {code: 'CHK-001', name: 'Checking Account', category: 'Deposit'})
+CREATE (credit:Product {code: 'CRD-001', name: 'Credit Card', category: 'Credit'})
+CREATE (loan:Product {code: 'LON-001', name: 'Personal Loan', category: 'Credit'})
+CREATE (mortgage:Product {code: 'MTG-001', name: 'Mortgage', category: 'Credit'})
+
+Creating relations 
+===================
+MATCH (alice:Customer {id: 'C001'})
+MATCH (savings:Product {code: 'SAV-001'})
+CREATE (alice)-[:USES {since: date('2020-01-15'), status: 'active'}]->(savings)
+
+MATCH (alice:Customer {id: 'C001'})
+MATCH (credit:Product {code: 'CRD-001'})
+CREATE (alice)-[:USES {since: date('2020-06-10'), status: 'active'}]->(credit)
+
+MATCH (bob:Customer {id: 'C002'})
+MATCH (checking:Product {code: 'CHK-001'})
+CREATE (bob)-[:USES {since: date('2021-03-20'), status: 'active'}]->(checking)
+
+MATCH (bob:Customer {id: 'C002'})
+MATCH (credit:Product {code: 'CRD-001'})
+CREATE (bob)-[:USES {since: date('2021-08-15'), status: 'active'}]->(credit)
+
+MATCH (bob:Customer {id: 'C002'})
+MATCH (loan:Product {code: 'LON-001'})
+CREATE (bob)-[:USES {since: date('2023-01-10'), status: 'active'}]->(loan)
+
+MATCH (carol:Customer {id: 'C003'})
+MATCH (savings:Product {code: 'SAV-001'})
+CREATE (carol)-[:USES {since: date('2019-07-10'), status: 'active'}]->(savings)
+
+MATCH (carol:Customer {id: 'C003'})
+MATCH (mortgage:Product {code: 'MTG-001'})
+CREATE (carol)-[:USES {since: date('2020-11-20'), status: 'active'}]->(mortgage)
+
+MATCH (david:Customer {id: 'C004'})
+MATCH (credit:Product {code: 'CRD-001'})
+CREATE (david)-[:USES {since: date('2022-06-05'), status: 'active'}]->(credit)
+
+MATCH (david:Customer {id: 'C004'})
+MATCH (loan:Product {code: 'LON-001'})
+CREATE (david)-[:USES {since: date('2023-09-12'), status: 'active'}]->(loan)
+
+Verify the setup 
+=================
+
+MATCH (c:Customer)-[u:USES]->(p:Product)
+RETURN c.name, p.name, u.since
+ORDER BY c.name, u.since
+
+
+
