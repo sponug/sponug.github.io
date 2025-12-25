@@ -57,7 +57,7 @@ Labels shape your domain by grouping nodes into sets. All nodes with a certain l
   
 Examples:
 - All customer nodes could be labeled :Customer
-- A person who is both a customer and an actor could have labels ```:Person:Customer:Actor ```
+- A person who is both a customer and an actor could have labels `:Person:Customer:Actor` 
 - You can use labels for temporary states: :Suspended for suspended accounts, :Active for active products
 - In the example below, a single node has multiple labels to describe different dimensions: (tom:Person:Actor:Customer)
 - This flexibility lets you query nodes from different perspectives. You might ask for "all Persons" in one query and "all Actors" in another, even if some nodes satisfy both criteria
@@ -218,7 +218,7 @@ CREATE (bob)-[:USES {since: date('2023-01-10'), status: 'active'}]->(loan)
 MATCH (carol:Customer {id: 'C003'})
 MATCH (savings:Product {code: 'SAV-001'})
 CREATE (carol)-[:USES {since: date('2019-07-10'), status: 'active'}]->(savings)
---
+
 MATCH (carol:Customer {id: 'C003'})
 MATCH (checking:Product {code: 'CHK-001'})
 CREATE (carol)-[:USES {since: date('2019-07-10'), status: 'active'}]->(checking)
@@ -323,20 +323,24 @@ Sort customers alphabetically:
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, p.name
 ORDER BY c.name
+```
 
 The default order is ascending. Use DESC for descending:
+```
 MATCH (c:Customer)
 RETURN c.name, c.since
 ORDER BY c.since DESC
-
+```
 This shows newest customers first.
 You can sort by multiple fields:
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, p.category, p.name
 ORDER BY c.name, p.category
-
+```
 This sorts first by customer name, then by product category within each customer.
 LIMIT restricts results to the first N rows:
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, p.name
 LIMIT 5
@@ -353,15 +357,14 @@ MATCH (c:Customer)
 RETURN c.name, c.since
 ORDER BY c.since DESC
 LIMIT 3
-
-This shows your three most recent customers.
 ```
+This shows your three most recent customers.
 
 ### COUNT and Aggregations
 
 Aggregations let you compute summary statistics. The most common is COUNT, which counts how many times something appears.
-```
 How many products does each customer use?
+```
 MATCH (c:Customer)-[:USES]->(p:Product)
 RETURN c.name, COUNT(p) AS product_count
 ORDER BY product_count DESC
@@ -371,8 +374,8 @@ ORDER BY product_count DESC
 creates an alias for the result column. Now you can reference product_count in ORDER BY.
 Key insight: When you use an aggregation function like COUNT, Cypher automatically groups results by all non-aggregated columns in your RETURN clause. Here, results are grouped by c.name, and products are counted within each group.
 
-```
 Other aggregation functions work similarly:
+```
 MATCH (c:Customer)-[u:USES]->(p:Product)
 RETURN c.name, 
        COUNT(p) AS product_count,
@@ -430,13 +433,12 @@ Here's what happens:
 - Without WITH, you couldn't filter on COUNT(p) because aggregations happen after WHERE clauses in the same query block.
 - WITH is also useful for transforming data mid-query:
 
+This collects all products into a list, then filters customers based on the size of that list.
 ```
 MATCH (c:Customer)-[:USES]->(p:Product)
 WITH c, COLLECT(p.name) AS products
 WHERE SIZE(products) > 2
 RETURN c.name, products
-
-This collects all products into a list, then filters customers based on the size of that list.
 ```
 
 
