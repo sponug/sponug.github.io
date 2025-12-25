@@ -441,7 +441,12 @@ WHERE SIZE(products) > 2
 RETURN c.name, products
 ```
 
+If you want to use my version of the queries , single file containing all the code : 
+![visualisation](https://raw.githubusercontent.com/sponug/sponug.github.io/master/images/cypher_queries.txt)
 
+
+## Wrap Up <a name="wrap"></a>
+You've come a long way in this tutorial. You started by understanding the five fundamental building blocks of Neo4j's property graph model—nodes, labels, relationships, relationship types, and properties. You then built your own banking graph from scratch, creating customers, products, and the relationships between them. Finally, you mastered the essential Cypher clauses that let you filter, sort, aggregate, and transform your graph data
 
 
 
