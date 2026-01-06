@@ -261,7 +261,7 @@ This is the part most teams skip. They fix the bug but don't add the test. Six m
 
 ## The prompts
 
-I've open-sourced the full prompt set. You don't need to run all 14—pick the ones relevant to your situation.
+I've open-sourced the full prompt set. 
 
 | # | Prompt | Phase | When to Use |
 |---|--------|-------|-------------|
