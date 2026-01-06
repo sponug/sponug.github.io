@@ -3,8 +3,6 @@ layout: post
 title: Fixing Vulnerabilities with Claude Code 
 ---
 
-# How I Fixed a SQL Injection Vulnerability (Using Claude Code and Systems Thinking)
-
 Most security work looks like this: find vulnerability, patch vulnerability, move on. Repeat until exhausted.
 
 The problem? You're playing whack-a-mole. Fixes don't stick because you never understood *why* the bug existed in the first place.
